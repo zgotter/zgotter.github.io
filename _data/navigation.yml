@@ -159,6 +159,8 @@ sidebar-dataScience:
     url: /dataScience/
   - title: "BOOK"
     url: /book/
+  - title: "BOOSTCAMP AI TECH 2기"
+    url: /boostcamp/
 #  - title: "Statistics"
 #    url: /statistics/
 
@@ -239,6 +241,17 @@ sidebar-pythonMLDefinitiveGuide-ch02:
 ###################### 파이썬 머신러닝 완벽가이드 (end) #############################
 
 ###################### book (end) #############################
+
+###################### boostcamp (start) #############################
+sidebar-boostcamp:
+  - title: "GO BACK"
+    url: /dataScience/
+  - title: "학습내용 정리 및 회고"
+    url: /boostcamp/
+    children :
+      - title: "Day6"
+        url: boostcamp/day006
+###################### boostcamp (end) #############################
 
 ###################### statistics (start) #############################
 # sidebar-statistics:
