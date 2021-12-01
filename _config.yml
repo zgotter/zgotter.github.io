@@ -42,7 +42,7 @@ logo:                  /assets/img/zgotter.JPG
 author:
   # Used by `jekyll-feed`:
   name:                김성한
-  email:               <mail@domain.tld>
+  email:               shkim4738@gmail.com
   # # Used by `jekyll-seo-tag`:
   # twitter:             <username>
 
@@ -419,4 +419,4 @@ jekyll_compose:
         path: /assets/img/sidebar-bg.jpg
       links:
         - title: Project Link
-          url: https://example.com
+          url: https://zgotter.github.io
