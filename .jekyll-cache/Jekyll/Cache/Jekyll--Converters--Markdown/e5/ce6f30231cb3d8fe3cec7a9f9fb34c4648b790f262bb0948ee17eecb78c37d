@@ -1,0 +1,99 @@
+I"s<h2 id="profile">Profile</h2>
+
+<p><img src="/assets/img/ksh.jpg" style="width: 250px;" /></p>
+
+<ul>
+  <li>이름 : 김성한</li>
+  <li>생년월일 : 1991년 10월 4일</li>
+  <li>이메일 : <a href="mailto:shkim4738@gmail.com">shkim4738@gmail.com</a></li>
+  <li>GitHub : <a href="https://github.com/zgotter">https://github.com/zgotter</a></li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="education">Education</h2>
+
+<ul>
+  <li>[2007.03 ~ 2010.02] 서울 한성고등학교 (졸업)</li>
+  <li>[2010.03 ~ 2016.02] 연세대학교 원주캠퍼스 수학 전공 (졸업)</li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="certificate">Certificate</h2>
+
+<ul>
+  <li>[2017.08.04 ~] 정보처리기사</li>
+  <li>[2019.07.02 ~] 데이터 분석 준전문가 (ADsP)</li>
+  <li>[2019.07.09 ~ 2021.07.08] SQL 개발자 (SQLD)</li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="work-experience">Work Experience</h2>
+
+<h3 id="web-development">Web development</h3>
+
+<ul>
+  <li><strong>[2016.11 ~ 2017.05] 응용SW엔지니어링 기반의 빅데이터 기술분석 전문가 양성과정 (수료)</strong>
+    <ul>
+      <li>웹 개발 기술 학습 (HTML, CSS, JavaScript, jQuery, Java, JSP, JSTL, SQL 등)</li>
+      <li>데이터 분석 기술 학습 (R, Python 활용)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<ul>
+  <li><strong>[2017.07 ~ 2017.09] 사내 홈페이지 Data Lake 개편</strong>
+    <ul>
+      <li>사내 홈페이지에서 사용중인 RDBMS를 NoSQL의 한 종류인 HBase로 전환하는 프로젝트 수행</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<ul>
+  <li><strong>[2017.12 ~ 2020.05] 한국거래소 시장정보시스템 운영</strong>
+    <ul>
+      <li>한국 거래소 내에서 생성되는 데이터를 바탕으로한 시장 상황 분석을 위한 화면 개발</li>
+      <li>사용자가 원하는 데이터를 추출하기 위한 SQL문 작성</li>
+      <li>데이터를 화면에 표출하기 위한 javaScript, jQuery, JSTL 등 활용</li>
+      <li>서버 로그 파일 분석</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<ul>
+  <li><strong>[2020.05 ~ 2020.06] 하나금융투자 하나원큐플러스(슈퍼앱) 입점 서비스 구축</strong>
+    <ul>
+      <li>하나은행과 모바일 서비스 연계 작업 및 향후 타 제휴 서비스의 확대가 가능하도록 구축</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<ul>
+  <li><strong>[2020.07 ~ 2021.01] 한국거래소 자본시장 정보데이터 종합센터 시스템 개발</strong>
+    <ul>
+      <li>한국거래소의 정보데이터시스템 구축 프로젝트 수행</li>
+      <li>공매도 통계, 정보데이터 종합사전, 간행물, 관리자 화면 등 개발</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<ul>
+  <li><strong>[2021.01 ~ 2021.05] 한국거래소 정보데이터시스템 운영</strong>
+    <ul>
+      <li>한국 거래소의 다양한 통계정보를 제공하는 정보데이터시스템 운영 업무 수행</li>
+    </ul>
+  </li>
+</ul>
+:ET

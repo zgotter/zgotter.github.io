@@ -46,7 +46,7 @@ author:
   # # Used by `jekyll-seo-tag`:
   # twitter:             <username>
 
-# Add links to the sidebar.
+# Add links to the sidebar. (메뉴)
 menu:
   # - title:             Example
   #   url:               /example/
@@ -54,16 +54,26 @@ menu:
   #   url:               /docs/
   - title:             About
     url:               /about/
+  - title:             Post
+    url:               /post/
+    submenu:
+      - title:          Boostcamp AI Tech 2
+        url:            /boostcampaitech2/
+        submenu:
+          - title:        Python Basics for AI
+            url:          /pythonbasicsforai/
+          - title:        AI Math
+            url:          /aimath/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
 legal:
-  - title:             LICENSE
-    url:               /LICENSE/
-  - title:             NOTICE
-    url:               /NOTICE/
-  - title:             CHANGELOG
-    url:               /CHANGELOG/
+  # - title:             LICENSE
+  #   url:               /LICENSE/
+  # - title:             NOTICE
+  #   url:               /NOTICE/
+  # - title:             CHANGELOG
+  #   url:               /CHANGELOG/
 
 # This text will appear in a `<small>` tag in the footer of every page.
 copyright:             © 2021. All rights reserved.
@@ -86,7 +96,7 @@ remote_theme: hydecorp/hydejack@v9.0.5
 # Customizaton
 # ----------------------------------------------------------------------------------------
  
-# Sidebar image and theme color of the site.
+# Sidebar image and theme color of the site. (사이드바 이미지)
 accent_image:          /assets/img/sidebar-bg.jpg
 accent_color:          rgb(79,177,186)
 

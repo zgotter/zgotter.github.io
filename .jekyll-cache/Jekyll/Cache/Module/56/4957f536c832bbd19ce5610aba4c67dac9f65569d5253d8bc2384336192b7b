@@ -1,0 +1,190 @@
+I"�!
+
+
+
+
+
+<article id="post-post-boostcampaitech2-pythonbasicsforai-pythonbasicsforai-02" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title flip-project-title">
+      
+        [Python Basics for AI] 2. 파이썬 기초 문법
+      
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2021-08-06T00:00:00+09:00">06 Aug 2021</time> in <a href="/post/" class="flip-title">Post</a> / <a href="/boostcampaitech2/" class="flip-title">Boostcamp AI Tech 2</a> / <a href="/pythonbasicsforai/" class="flip-title">Python Basics for AI</a> 
+      </span>
+      
+        
+          
+          
+          
+            
+            
+            <span class="ellipsis" data-tippy-content="Last modified at: 2021-12-02">
+              <span class="sr-only">Last modified at:</span>
+              <span class="icon-history"></span>
+              <time datetime="2021-12-02T01:53:25+09:00">2021-12-02</time>
+            </span>
+          
+        
+      
+    </div>
+
+    
+    
+
+    
+
+
+
+  
+    <p class="note-sm" >
+      파이썬 기초 문법
+
+    </p>
+  
+
+
+  </header>
+
+  
+    <h2 id="21-변수-variables">2.1 변수 (Variables)</h2>
+
+<p>생략</p>
+
+<h2 id="22-함수와-콘솔-io-function-and-console-io">2.2 함수와 콘솔 I/O (Function and Console I/O)</h2>
+
+<h3 id="221-함수">2.2.1 함수</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span> <span class="o">+</span> <span class="mi">7</span>
+
+<span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">+</span> <span class="n">f</span><span class="p">(</span><span class="n">g</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">+</span> <span class="n">g</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span> <span class="c1"># 151
+</span></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>151
+</code></pre></div></div>
+
+<p><br /></p>
+
+<h2 id="23-conditionals-and-loops">2.3 Conditionals and Loops</h2>
+
+<p>생략</p>
+
+<h2 id="24-string-and-advanced-function-concept">2.4 String and advanced function concept</h2>
+
+<h3 id="241-function-type-hints">2.4.1 function type hints</h3>
+
+<ul>
+  <li>파이썬의 가장 큰 특징 : dynamic typing
+    <ul>
+      <li>처음 함수를 사용하는 사용자가 interface를 알기 어렵다는 단점이 있음</li>
+    </ul>
+  </li>
+  <li>python 3.5 버전 이후로는 PEP 484 에 기반하여 type hints 기능 제공</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">do_function</span><span class="p">(</span><span class="n">var_name</span><span class="p">:</span> <span class="n">var_type</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">return_type</span><span class="p">:</span>
+    <span class="k">pass</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">type_hint_example</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span> <span class="c1"># (파라미터명: 타입) -&gt; 리턴 타입
+</span>    <span class="k">return</span> <span class="sa">f</span><span class="s">"Hello, </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s">"</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">type_hint_example</span><span class="p">(</span><span class="s">'sunghan'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'Hello, sunghan'
+</code></pre></div></div>
+
+<p><br /></p>
+
+<p><strong>Type hints의 장점</strong></p>
+
+<ul>
+  <li>사용자에게 인터페이스를 명확히 알려줄 수 있다.</li>
+  <li>함수의 문서화 시 parameter에 대한 정보를 명확히 알 수 있다.</li>
+  <li>mypy 또는 IDE, linter 등을 통해 코드의 발생 가능한 오류를 사전에 확인</li>
+  <li>시스템 전체적인 안정성을 확보할 수 있다.</li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="242-function-docstring">2.4.2 function docstring</h3>
+
+<ul>
+  <li>파이썬 함수에 대한 상세스펙을 사전에 작성 (함수 사용자의 이해도 up)</li>
+  <li>세개의 따옴표로 docstring 영역 표시 (함수명 아래)</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">kos_root</span><span class="p">():</span>
+    <span class="s">"""Return the pathname of the KOS root directory."""</span>
+    <span class="k">global</span> <span class="n">_kos_root</span>
+    <span class="k">if</span> <span class="n">_kos_root</span><span class="p">:</span> <span class="k">return</span> <span class="n">_kos_root</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">add_binary</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="s">"""
+    Returns the sum of two decimal numbers in binary digits.
+
+        Parameters:
+            a (int): A decimal integer
+            b (int): Another decimal integer
+
+        Returns:
+            binary_sum (str): Binary string of the sum of a and b
+
+        Examples:
+            a = 10, b = 15
+            binary_sum = "11001"
+
+    """</span>
+    <span class="n">binary_sum</span> <span class="o">=</span> <span class="nb">bin</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)[</span><span class="mi">2</span><span class="p">:]</span>
+    <span class="k">return</span> <span class="n">binary_sum</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">add_binary</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>11001
+</code></pre></div></div>
+
+<p><br /></p>
+
+<ul>
+  <li>vscode 의 <code class="language-plaintext highlighter-rouge">Python Docstring Generator</code> extensions 를 설치하면 손쉽게 docstring 을 작성할 수 있다.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">Ctrl + Shift + P</code> -&gt; <code class="language-plaintext highlighter-rouge">Generate Docstring</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="243-함수-작성-가이드-라인">2.4.3 함수 작성 가이드 라인</h3>
+
+<ul>
+  <li>가능하면 짧게 작성</li>
+  <li>함수명은 소문자로 구성, 필요하면 밑줄로 나눔</li>
+  <li>함수 이름에 함수의 역할, 의도가 명확히 들어낼 것
+    <ul>
+      <li>v, o : ~를 한다.</li>
+      <li>띄어쓰기는 <code class="language-plaintext highlighter-rouge">_</code> 사용</li>
+      <li>ex) <code class="language-plaintext highlighter-rouge">print_hello_world()</code></li>
+    </ul>
+  </li>
+  <li>하나의 함수에는 유사한 역할을 하는 코드만 포함</li>
+  <li>인자로 받은 값 자체를 바꾸진 말 것 (임시 변수 선언)</li>
+</ul>
+
+  
+</article>
+:ET
