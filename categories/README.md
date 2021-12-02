@@ -13,10 +13,15 @@ permalink: /categories/
 
 [Example]: /blog/example/ -->
 
+* [Boostcamp AI Tech 2]{:.heading.flip-title} --- 부스트캠프 AI Tech 2기
+
+[Boostcamp AI Tech 2]: /boostcampaitech2/
+
+<!-- 
 ## Boostcamp AI Tech 2기
 
 * [Python Basics for AI]{:.heading.flip-title} --- AI를 위한 파이썬 기초
 * [AI Math]{:.heading.flip-title} --- AI를 위한 수학
 
 [Python Basics for AI]: /blog/pythonbasicsforai/
-[AI Math]: /blog/aimath/
+[AI Math]: /blog/aimath/ -->
