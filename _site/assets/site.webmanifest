@@ -1,8 +1,8 @@
 {
-  "lang": "en",
-  "name": "Hydejack",
-  "short_name": "Hydejack",
-  "description": "Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.",
+  "lang": "ko-KR, en-US",
+  "name": "zgotter's blog",
+  "short_name": "zgotter's blog",
+  "description": "학습 내용을 정리한 블로그 입니다.",
   "start_url": "/?utm_source=homescreen",
   "theme_color": "rgb(25,55,71)",
   "background_color": "#fff",
