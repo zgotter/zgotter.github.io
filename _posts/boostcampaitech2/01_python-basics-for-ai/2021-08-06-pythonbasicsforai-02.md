@@ -14,6 +14,7 @@ categories:
 author: zgotter
 sitemap: false
 published: true
+comments: true
 ---
 
 # 2. [Python Basics for AI] 2. 파이썬 기초 문법
