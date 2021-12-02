@@ -48,24 +48,36 @@ author:
 
 # Add links to the sidebar.
 menu:
-  - title:             Blog
-    url:               /blog/
-  - title:             Projects
-    url:               /projects/
-  - title:             Résumé*
-    url:               /resume/
-  - title:             Documentation
-    url:               /docs/
+  # - title:             Blog
+  #   url:               /blog/
+  # - title:             Projects
+  #   url:               /projects/
+  # - title:             Résumé*
+  #   url:               /resume/
+  # - title:             Documentation
+  #   url:               /docs/
+  - title:             About
+    url:               /about/
+  - title:             Post
+    url:               /post/
+    submenu:
+      - title:          Boostcamp AI Tech 2
+        url:            /boostcampaitech2/
+        submenu:
+          - title:        Python Basics for AI
+            url:          /pythonbasicsforai/
+          - title:        AI Math
+            url:          /aimath/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
 legal:
-  - title:             LICENSE
-    url:               /LICENSE/
-  - title:             NOTICE
-    url:               /NOTICE/
-  - title:             CHANGELOG
-    url:               /CHANGELOG/
+#  - title:             LICENSE
+#    url:               /LICENSE/
+#  - title:             NOTICE
+#    url:               /NOTICE/
+#  - title:             CHANGELOG
+#    url:               /CHANGELOG/
 
 # This text will appear in a `<small>` tag in the footer of every page.
 copyright:             © 2021. All rights reserved.
