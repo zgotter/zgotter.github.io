@@ -1,17 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko"><!--
- __  __                __                                     __
-/\ \/\ \              /\ \             __                    /\ \
-\ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
- \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
-  \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
-   \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
-    \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
-                /\___/                \ \____/
-                \/__/                  \/___/
-
-Powered by Hydejack v9.1.5 <https://hydejack.com/>
--->
+<html lang="ko">
 
 
 
@@ -25,25 +13,27 @@ Powered by Hydejack v9.1.5 <https://hydejack.com/>
 
 
 
+  <meta name="robots" content="noindex">
+
 
 
   
     
 <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Blog | zgotter’s blog</title>
-<meta name="generator" content="Jekyll v4.2.1" />
-<meta property="og:title" content="Blog" />
+<title>Thank You! | zgotter’s blog</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Thank You!" />
 <meta name="author" content="김성한" />
 <meta property="og:locale" content="ko_KR, en_US" />
-<meta name="description" content="The official Hydejack blog. Version updates, example content and how-to guides on how to blog with Jekyll." />
-<meta property="og:description" content="The official Hydejack blog. Version updates, example content and how-to guides on how to blog with Jekyll." />
+<meta name="description" content="학습 내용을 정리한 블로그 입니다." />
+<meta property="og:description" content="학습 내용을 정리한 블로그 입니다." />
 <link rel="canonical" href="http://localhost:4000/" />
 <meta property="og:url" content="http://localhost:4000/" />
 <meta property="og:site_name" content="zgotter’s blog" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Blog" />
+<meta property="twitter:title" content="Thank You!" />
 <script type="application/ld+json">
-{"url":"http://localhost:4000/","headline":"Blog","dateModified":"2021-11-30T13:54:27+09:00","name":"zgotter’s blog","author":{"@type":"Person","name":"김성한"},"description":"The official Hydejack blog. Version updates, example content and how-to guides on how to blog with Jekyll.","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/zgotter.JPG"},"name":"김성한"},"@type":"WebSite","@context":"https://schema.org"}</script>
+{"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/zgotter.JPG"},"name":"김성한"},"url":"http://localhost:4000/","name":"zgotter’s blog","author":{"@type":"Person","name":"김성한"},"description":"학습 내용을 정리한 블로그 입니다.","@type":"WebSite","headline":"Thank You!","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -53,7 +43,7 @@ Powered by Hydejack v9.1.5 <https://hydejack.com/>
 
 
 
-  <meta name="theme-color" content="rgb(8,46,57)">
+  <meta name="theme-color" content="rgb(25,55,71)">
 
 
 <meta charset="utf-8">
@@ -87,6 +77,7 @@ Powered by Hydejack v9.1.5 <https://hydejack.com/>
 
 <link rel="preload" href="/assets/img/swipe.svg" as="image" id="_hrefSwipeSVG">
 
+<link rel="dns-prefetch" href="/assets/js/search-worker-9.1.5.js" as="worker" id="_hrefSearch">
 
 
 
@@ -103,10 +94,11 @@ Powered by Hydejack v9.1.5 <https://hydejack.com/>
   w._noNavbar = false;
   w._noToc = false;
   w._noSearch = false;
+  w._advertise = false;
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2021-12-02T10:46:35+09:00',
+    INDEX_KEY: 'index--2021-12-02T11:03:52+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -130,7 +122,7 @@ Powered by Hydejack v9.1.5 <https://hydejack.com/>
 
   <style id="_pageStyle">
 
-html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);--accent-color-highlight: rgba(79,177,186,0.1);--accent-color-darkened: #409ba3;--theme-color: rgb(8,46,57)}
+html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);--accent-color-highlight: rgba(79,177,186,0.1);--accent-color-darkened: #409ba3;--theme-color: rgb(25,55,71);--dark-mode-body-bg: #2a2d2f;--dark-mode-border-color: #363a3d}
 
 </style>
 
@@ -138,75 +130,20 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 <!--<![endif]-->
 
 
-<!--
-Code used for embedding Gumroad on the Hydejack Site. 
-Left here for reference, feel free to delete.
--->
-<link rel="dns-prefetch" href="https://assets.gumroad.com">
-<script>window.GET_CLAPS_API = 'https://worker.getclaps.dev'</script>
-<script type="module">
-  const ppiData = window._ppiData = fetch('https://hydejack-ppi.qwtel.workers.dev', { mode: 'cors'}).then(res => res.json()).catch(() => ({}));
-  const promisify = f => x => new Promise(r => f(x).addEventListener('load', r));
-  const loadJS = promisify(window.loadJS);
-  {
-    let p;
-    document.querySelector('hy-push-state').addEventListener('load', () => {
-      const io = new IntersectionObserver(async (entries) => {
-        if (entries.some(x => x.isIntersecting)) {
-          p = p || loadJS('https://gumroad.com/js/gumroad-embed.js');
-          const [{ code }] = await Promise.all([ppiData, p]);
-          document.querySelectorAll('.gumroad-product-embed').forEach(el => { 
-            if (!el.dataset.gumroadParams) {
-              el.dataset.gumroadParams = 'offer_code=' + (code || 'qr0tw8m');
-            }
-          });
-          if (!window.GumroadEmbed) {
-            await new Promise(function check1(res) {
-              if ('createGumroadEmbed' in window) res(window.createGumroadEmbed());
-              else setTimeout(() => check1(res), 200);
-            });
-          }
-          await new Promise(function check2(res) {
-            if ('GumroadEmbed' in window) res(GumroadEmbed.reload());
-            else setTimeout(() => check2(res), 200);
-          });
-        }
-      }, { rootMargin: '1440px' });
-      document.querySelectorAll('.gumroad-product-embed').forEach(el => io.observe(el));
-    });
-  }
-  {
-    let p;
-    document.querySelector('hy-push-state').addEventListener('load', () => {
-      const io = new IntersectionObserver(async (entries) => {
-        if (entries.some(x => x.isIntersecting)) {
-          p = p || loadJS('https://gumroad.com/js/gumroad.js');
-          const [{ code }] = await Promise.all([ppiData, p]);
-          if (code) {
-            document.querySelectorAll('.gumroad-button').forEach(el => { 
-              if (!el.href.endsWith(code)) {
-                el.href = el.href + '/' + (code || 'qr0tw8m');
-              }
-            });
-          }
-          if (!window.GumroadOverlay) {
-            await new Promise(function check(res) {
-              if ('createGumroadOverlay' in window) res(window.createGumroadOverlay());
-              else setTimeout(() => check(res), 200);
-            });
-          }
-        }
-      }, { rootMargin: '300px' });
-      document.querySelectorAll('.gumroad-button').forEach(el => io.observe(el));
-    });
-  }
-</script>
+
 
 
 </head>
 
 <body class="no-break-layout">
   
+<script>
+  window._sunrise = 6;
+  window._sunset =  18;
+  !function(e,s){var d="light-mode",o="dark-mode",a=(new Date).getHours();"matchMedia"in e&&e.matchMedia("(prefers-color-scheme)")||(o=(e=a<=e._sunrise||a>=e._sunset?o:d)==o?d:o,s.body.classList.add(e),s.body.classList.remove(o))}(window,document);
+
+</script>
+
 
 
 <hy-push-state
@@ -218,13 +155,127 @@ Left here for reference, feel free to delete.
   hashchange
 >
   
+  
+  <div id="_navbar" class="navbar fixed-top">
+  <div class="content">
+    <span class="sr-only">Jump to:</span>
+    <div class="nav-btn-bar">
+      <a id="_menu" class="nav-btn no-hover" href="#_drawer--opened">
+        <span class="sr-only">Navigation</span>
+        <span class="icon-menu"></span>
+      </a>
+      <div class="nav-span"></div>
+    </div>
+  </div>
+</div>
+<hr class="sr-only" hidden />
+
+  <main
+  id="_main"
+  class="content layout-page"
+  role="main"
+>
+  <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+</ul></nav>
+  <article class="page mb6" role="article">
+  <header>
+    <h1 class="page-title">Thank You!</h1>
+    
+
+
+
+  <div class="hr pb0"></div>
+
+
+  </header>
+
+  <p>Thank you for buying the PRO version of Hydejack! 🎉</p>
+
+<p>More than one year ago I was looking for a blogging platform but couldn’t find it:
+One that would let me write posts in markdown with my own editor,
+one that didn’t look awful buy modern design standards, and one that felt snappy on a mobile phone.
+That and more is now Hydejack. I hope you enjoy it <a href="https://qwtel.com/">as much as I do</a>.</p>
+
+<h2 id="first-steps">First Steps</h2>
+<p>Start by reading the <a href="/docs/" class="heading flip-title">Documentation</a>.
+Specifically, the chapters below should be relevant now:</p>
+
+<ul class="related-posts faded">
+  <li><a href="/docs/install/" class="heading flip-title">Install</a> — How to install and run Hydejack.</li>
+  <li><a href="/docs/config/" class="heading flip-title">Config</a> — Once Jekyll is running you can start with basic configuration.</li>
+</ul>
+
+<p>After you’ve familiarized yourself with Hydejack, you can delete the following folders and files
+containing example content:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>├── _featured_categories
+│   └── example.md
+├── _projects
+│   └── *
+├── docs
+├── example
+├── licenses
+├── assets
+│   └── img
+│       ├── blog
+│       ├── docs
+│       └── projects
+├── CHANGELOG.md
+├── forms-by-example.md
+├── LICENSE.md
+└── NOTICE.md
+</code></pre></div></div>
+
+
+</article>
+
+
+  <hr class="dingbat related mb6" />
+
+
+
+
+
+  
+<footer class="content" role="contentinfo">
+  <hr/>
+  
+    <p><small class="copyright">© 2021. All rights reserved.
+</small></p>
+  
+  
+    <nav class="legal"><small>
+    
+      
+      <a class="heading flip-title" href="/LICENSE/">LICENSE</a>
+      |
+    
+      
+      <a class="heading flip-title" href="/NOTICE/">NOTICE</a>
+      |
+    
+      
+      <a class="heading flip-title" href="/CHANGELOG/">CHANGELOG</a>
+      
+    
+    </small></nav>
+  
+  
+  <hr class="sr-only"/>
+</footer>
+
+
+</main>
+
   <hy-drawer
   id="_drawer"
-  class="cover"
+  class=""
   side="left"
   threshold="10"
   noscroll
-  opened
+  
 >
   <header id="_sidebar" class="sidebar" role="banner">
     
@@ -232,7 +283,7 @@ Left here for reference, feel free to delete.
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(8,46,57);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">
@@ -260,11 +311,11 @@ Left here for reference, feel free to delete.
       <li>
         <a
           id="_drawer--opened"
-          href="/about/"
+          href="/blog/"
           class="sidebar-nav-item "
           
         >
-          About
+          Blog
         </a>
       </li>
     
@@ -272,11 +323,35 @@ Left here for reference, feel free to delete.
       <li>
         <a
           
-          href="/post/"
+          href="/projects/"
           class="sidebar-nav-item "
           
         >
-          Post
+          Projects
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/resume/"
+          class="sidebar-nav-item "
+          
+        >
+          Résumé*
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/docs/"
+          class="sidebar-nav-item "
+          
+        >
+          Documentation
         </a>
       </li>
     
@@ -307,9 +382,9 @@ Left here for reference, feel free to delete.
   
 
   <li>
-    <a href="https://instagram.com/haanneeeee" title="Instagram" class="no-mark-external">
-      <span class="icon-instagram"></span>
-      <span class="sr-only">Instagram</span>
+    <a href="https://twitter.com/<username>" title="Twitter" class="no-mark-external">
+      <span class="icon-twitter"></span>
+      <span class="sr-only">Twitter</span>
     </a>
   </li>
 
@@ -331,33 +406,9 @@ Left here for reference, feel free to delete.
   
 
   <li>
-    <a href="https://github.com/zgotter" title="GitHub" class="no-mark-external">
+    <a href="https://github.com/<username>" title="GitHub" class="no-mark-external">
       <span class="icon-github"></span>
       <span class="sr-only">GitHub</span>
-    </a>
-  </li>
-
-
-    
-      
-
-
-
-  
-
-  
-  
-  
-  
-
-  
-
-  
-
-  <li>
-    <a href="mailto:shkim4738@gmail.com" title="Email" class="no-mark-external">
-      <span class="icon-mail"></span>
-      <span class="sr-only">Email</span>
     </a>
   </li>
 
@@ -372,216 +423,6 @@ Left here for reference, feel free to delete.
 </hy-drawer>
 <hr class="sr-only" hidden />
 
-  <div id="_navbar" class="navbar fixed-top">
-  <div class="content">
-    <span class="sr-only">Jump to:</span>
-    <div class="nav-btn-bar">
-      <a id="_menu" class="nav-btn no-hover" href="#_drawer--opened">
-        <span class="sr-only">Navigation</span>
-        <span class="icon-menu"></span>
-      </a>
-      <div class="nav-span"></div>
-    </div>
-  </div>
-</div>
-<hr class="sr-only" hidden />
-
-  <main
-  id="_main"
-  class="content layout-blog"
-  role="main"
->
-  <nav id="breadcrumbs" class="screen-only"><ul>
-  
-  
-</ul></nav>
-  
-
-
-  
-
-  
-
-
-
-
-
-<article id="post-post-boostcampaitech2-aimath-aimath-01" class="page post mb6" role="article">
-  <header>
-    <h1 class="post-title flip-project-title">
-      <a href="/post/boostcampaitech2/aimath/2021-08-06-aimath-01/" class="flip-title">
-        [AI Math] 1. 벡터
-      </a>
-    </h1>
-
-    <div class="post-date">
-      
-      <span class="ellipsis mr1">
-        <time datetime="2021-08-06T00:00:00+09:00">06 Aug 2021</time> in <a href="/post/" class="flip-title">Post</a> / <a href="/boostcampaitech2/" class="flip-title">Boostcamp AI Tech 2</a> / <a href="/aimath/" class="flip-title">AI Math</a> 
-      </span>
-      
-        
-          
-          
-          
-            
-            
-            <span class="ellipsis" data-tippy-content="Last modified at: 2021-12-02">
-              <span class="sr-only">Last modified at:</span>
-              <span class="icon-history"></span>
-              <time datetime="2021-12-02T01:59:29+09:00">2021-12-02</time>
-            </span>
-          
-        
-      
-    </div>
-
-    
-    
-
-    
-
-
-
-  
-    <p class="note-sm" >
-      파이썬 기초 문법
-
-    </p>
-  
-
-
-  </header>
-
-  
-    <h2 id="11-벡터의-노름">1.1 벡터의 노름</h2>
-
-
-    
-    
-    <footer>
-      <p class="read-more">
-        Continue reading <a class="heading flip-title" href="/post/boostcampaitech2/aimath/2021-08-06-aimath-01/">[AI Math] 1. 벡터</a>
-
-      </p>
-    </footer>
-  
-</article>
-
-
-  
-
-
-
-
-
-<article id="post-post-boostcampaitech2-pythonbasicsforai-pythonbasicsforai-02" class="page post mb6" role="article">
-  <header>
-    <h1 class="post-title flip-project-title">
-      <a href="/post/boostcampaitech2/pythonbasicsforai/2021-08-06-pythonbasicsforai-02/" class="flip-title">
-        [Python Basics for AI] 2. 파이썬 기초 문법
-      </a>
-    </h1>
-
-    <div class="post-date">
-      
-      <span class="ellipsis mr1">
-        <time datetime="2021-08-06T00:00:00+09:00">06 Aug 2021</time> in <a href="/post/" class="flip-title">Post</a> / <a href="/boostcampaitech2/" class="flip-title">Boostcamp AI Tech 2</a> / <a href="/pythonbasicsforai/" class="flip-title">Python Basics for AI</a> 
-      </span>
-      
-        
-          
-          
-          
-            
-            
-            <span class="ellipsis" data-tippy-content="Last modified at: 2021-12-02">
-              <span class="sr-only">Last modified at:</span>
-              <span class="icon-history"></span>
-              <time datetime="2021-12-02T01:59:29+09:00">2021-12-02</time>
-            </span>
-          
-        
-      
-    </div>
-
-    
-    
-
-    
-
-
-
-  
-    <p class="note-sm" >
-      파이썬 기초 문법
-
-    </p>
-  
-
-
-  </header>
-
-  
-    <ul>
-  <li>toc</li>
-</ul>
-
-
-    
-    
-    <footer>
-      <p class="read-more">
-        Continue reading <a class="heading flip-title" href="/post/boostcampaitech2/pythonbasicsforai/2021-08-06-pythonbasicsforai-02/">[Python Basics for AI] 2. 파이썬 기초 문법</a>
-
-      </p>
-    </footer>
-  
-</article>
-
-
-
-
-  <h2 class="sr-only">Pagination</h2>
-<nav class="pagination heading clearfix" role="navigation">
-  <ul>
-    <li class="pagination-item older" >
-      
-      
-      
-  <span class=" ">Older</span>
-
-
-    </li>
-    <li class="pagination-item newer" >
-      
-      
-      
-  <span class=" ">Newer</span>
-
-
-    </li>
-  </ul>
-</nav>
-
-
-
-  
-<footer class="content" role="contentinfo">
-  <hr/>
-  
-    <p><small class="copyright">© 2021. All rights reserved.
-</small></p>
-  
-  
-    <p><small>Powered by <a class="external" href="https://hydejack.com/">Hydejack</a> v<span id="_version">9.1.5</span></small></p>
-  <hr class="sr-only"/>
-</footer>
-
-
-</main>
-
-  
 </hy-push-state>
 
 
@@ -594,73 +435,17 @@ Left here for reference, feel free to delete.
 
   
 
+  <script type="module">
+    if ('serviceWorker' in navigator) {
+      /**/
+      navigator.serviceWorker.getRegistration()
+        .then(r => r.unregister())
+        .catch(() => {});
+      /**/
+    }
+  </script>
 <!--<![endif]-->
-  <!-- <script>
-  document.querySelector('hy-push-state').setAttribute('prefetch', '');
-
-  document.querySelectorAll('.sidebar a[href^="/"]').forEach(function (el) { 
-    el.addEventListener('click', function (e) {
-      if (el.pathname === window.location.pathname) {
-        e.preventDefault();
-        e.stopPropagation();
-        document.querySelector('hy-drawer').close();
-      }
-    });
-  });
-</script> -->
-
-<!--
-Code for integrating CloudFlare's email protection with Hydejack's single page app loading.
--->
-<script>
-  document.getElementById('_pushState').addEventListener('hy-push-state-after', function (e) {
-    function e(e){
-      (console.error?console.error:console.log).call(console,e)
-    }
-
-    function t(e){
-      return l.innerHTML='<a href="'+e.replace(/"/g,"&quot;")+'"></a>',l.childNodes[0].getAttribute("href")
-    }
-
-    function r(e,t){
-      var r=e.substr(t,2);return parseInt(r,16)
-    }
-
-    function n(e,n){
-      for(var o="",c=r(e,n),a=n+2;a<e.length;a+=2){
-        var l=r(e,a)^c;
-        o+=String.fromCharCode(l)
-      }
-      return t(o)
-    }
-
-    var o="/cdn-cgi/l/email-protection#",
-        c=".__cf_email__",
-        a="data-cfemail",
-        l=document.createElement("div");
-
-    !function(){
-      for(var t=document.getElementsByTagName("a"),r=0;r<t.length;r++)
-        try{
-          var c=t[r],a=c.href.indexOf(o);
-          a>-1&&(c.href="mailto:"+n(c.href,a+o.length))
-        }catch(t){
-          e(t)
-        }
-    }(),
-    function(){
-      for(var t=document.querySelectorAll(c),r=0;r<t.length;r++)
-        try{
-          var o=t[r],l=n(o.getAttribute(a),0),i=document.createTextNode(l);
-          o.parentNode.replaceChild(i,o)
-        }catch(t){
-          e(t)
-        }
-    }()
-  });
-</script>
-
-
+  
 
 
 
@@ -726,8 +511,42 @@ Code for integrating CloudFlare's email protection with Hydejack's single page a
   </a>
 </template>
 
-</div>
+  
+  
+    <template id="_dark-mode-template">
+  <button id="_dark-mode" class="nav-btn no-hover" >
+    <span class="sr-only">Dark Mode</span>
+    <span class="icon-brightness-contrast"></span>
+  </button>
+</template>
 
+  
+  
+    <template id="_search-template">
+  <button id="_search" class="nav-btn no-hover">
+    <label class="sr-only" for="_search-input">Search</label>
+    <span class="icon-search"></span>
+  </button>
+  <div id="_search-box">
+    <div class="nav-btn">
+      <span class="icon-search"></span>
+    </div>
+    <input 
+      id="_search-input"
+      type="search"
+      class="form-control form-control-lg nav-btn"
+      placeholder="Build with JEKYLL_ENV=production to enable search."
+    />
+    <button type="reset" class="nav-btn no-hover">
+      <span class="sr-only">Close</span>
+      <span class="icon-cross"></span>
+    </button>
+  </div>
+  <div id="_hits"></div>
+</template>
+
+  
+</div>
 
 </body>
 </html>

@@ -4,7 +4,7 @@
   "short_name": "zgotter's blog",
   "description": "학습 내용을 정리한 블로그 입니다.",
   "start_url": "/?utm_source=homescreen",
-  "theme_color": "rgb(8,46,57)",
+  "theme_color": "rgb(25,55,71)",
   "background_color": "#fff",
   "orientation": "portrait",
   "display": "minimal-ui",

@@ -1,31 +1,34 @@
-# 개인 정보 입력
 # The primary author of this blog.
 # Must be the same as `author` in `_config.yml`.
 # Change `author1` to your shortname.
 author1:
-  name:              김성한(zgotter)
-  email:             shkim4738@gmail.com
+  name:              <firstname> <lastname>
+  email:             <mail@domain.tld>
 
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    데이터 엔지니어를 꿈꾸는 개발자
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    
+    Open `_data/authors.yml` to edit this text.
 
   # This photo will be used in the about section
   picture:
-    path:            /assets/img/zgotter.JPG
+    path:            https://placehold.it/128x128
     # srcset is optional, but can be used to provide higher res versions for retina displays
     srcset:
-      1x:            /assets/img/zgotter.JPG
-      2x:            /assets/img/zgotter.JPG
+      1x:            https://placehold.it/128x128
+      2x:            https://placehold.it/256x256
 
   # Social media icons in sidebar
   # Comment/uncommet to show/hide
   # Rearrange to change the order in which they appear
   social:
-    instagram:       haanneeeee
-    github:          zgotter
-    email:           shkim4738@gmail.com
+    twitter:         <username>
+    github:          <username>
+    # email:           <mail@domain.tld>
     # rss:             https://<url>/feed.xml
     # facebook:        <username>
     # google:          <number>
@@ -36,7 +39,7 @@ author1:
     # spotify:         <user>/<number>
     # soundcloud:      <username>
     # lastfm:          <username>
-    #twitter:         <username>
+    # instagram:       <username>
     # flickr:          <string@string>
     # 500px:           <username>
     # dribbble:        <username>

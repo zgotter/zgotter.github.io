@@ -46,44 +46,36 @@ author:
   # # Used by `jekyll-seo-tag`:
   # twitter:             <username>
 
-# Add links to the sidebar. (메뉴)
+# Add links to the sidebar.
 menu:
-  # - title:             Example
-  #   url:               /example/
-  # - title:             Documentation
-  #   url:               /docs/
-  - title:             About
-    url:               /about/
-  - title:             Post
-    url:               /post/
-    submenu:
-      - title:          Boostcamp AI Tech 2
-        url:            /boostcampaitech2/
-        submenu:
-          - title:        Python Basics for AI
-            url:          /pythonbasicsforai/
-          - title:        AI Math
-            url:          /aimath/
+  - title:             Blog
+    url:               /blog/
+  - title:             Projects
+    url:               /projects/
+  - title:             Résumé*
+    url:               /resume/
+  - title:             Documentation
+    url:               /docs/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
 legal:
-  # - title:             LICENSE
-  #   url:               /LICENSE/
-  # - title:             NOTICE
-  #   url:               /NOTICE/
-  # - title:             CHANGELOG
-  #   url:               /CHANGELOG/
+  - title:             LICENSE
+    url:               /LICENSE/
+  - title:             NOTICE
+    url:               /NOTICE/
+  - title:             CHANGELOG
+    url:               /CHANGELOG/
 
 # This text will appear in a `<small>` tag in the footer of every page.
 copyright:             © 2021. All rights reserved.
 
 # Format of the permalinks
-permalink:             /:categories/:year-:month-:day-:title/
+permalink:             /blog/:categories/:year-:month-:day-:title/
 
 # Pagination configuration (used by the `blog` layout)
 paginate:              10
-paginate_path:         /:num/
+paginate_path:         /blog/:num/
 
 
 # Theme
@@ -96,14 +88,14 @@ remote_theme: hydecorp/hydejack@v9.0.5
 # Customizaton
 # ----------------------------------------------------------------------------------------
  
-# Sidebar image and theme color of the site. (사이드바 이미지)
+# Sidebar image and theme color of the site.
 accent_image:          /assets/img/sidebar-bg.jpg
 accent_color:          rgb(79,177,186)
 
 # This is used for the `theme-color` meta tag,
 # which changes the background color of the browser UI in certain browsers.
 # Defaults to `accent_color`.
-theme_color:           rgb(8,46,57)
+theme_color:           rgb(25,55,71)
 
 # The string encoding which fonts to fetch from Google Fonts.
 # See: <https://hydejack.com/docs/configuration/>
@@ -127,7 +119,7 @@ defaults:
       path:            hyde/
     values:
       accent_color:    rgb(38,139,210)
-      theme_color:     rgb(38,139,210)
+      theme_color:     rgb(32,32,32)
       accent_image:
         background:    rgb(32,32,32)
         overlay:       false
@@ -138,6 +130,7 @@ defaults:
     values:
       sitemap:         false
 
+  # Don't include licenses in sitemap (feel free to delete)
   - scope:
       path:            licenses/
     values:
@@ -300,7 +293,7 @@ hydejack:
 
 collections:
   featured_categories:
-    permalink:         /:name/
+    permalink:         /blog/:name/
     output:            true
 
   featured_tags:
@@ -316,6 +309,8 @@ collections:
 # ----------------------------------------------------------------------------------------
 
 exclude:
+  - ./#jekyll-theme-hydejack/node_modules
+  - ./#jekyll-theme-hydejack/.git
   - .jekyll-cache
   - .sass-cache
   - '*.toml'
@@ -400,6 +395,7 @@ compress_html:
 
 sass:
   style:               compressed
+
 
 # Jekyll Compose Defaults
 # ---------------------------------------------------------------------------------------
