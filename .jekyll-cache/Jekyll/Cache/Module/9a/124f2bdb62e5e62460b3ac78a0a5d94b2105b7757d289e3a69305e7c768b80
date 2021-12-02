@@ -1,0 +1,180 @@
+I"
+
+
+
+
+
+<article id="post-post-boostcampaitech2-aimath-aimath-01" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title flip-project-title">
+      
+        [AI Math] 1. 벡터
+      
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2021-08-06T00:00:00+09:00">06 Aug 2021</time> in <a href="/post/" class="flip-title">Post</a> / <a href="/boostcampaitech2/" class="flip-title">Boostcamp AI Tech 2</a> / <a href="/aimath/" class="flip-title">AI Math</a> 
+      </span>
+      
+        
+          
+          
+          
+            
+            
+            <span class="ellipsis" data-tippy-content="Last modified at: 2021-12-02">
+              <span class="sr-only">Last modified at:</span>
+              <span class="icon-history"></span>
+              <time datetime="2021-12-02T01:59:29+09:00">2021-12-02</time>
+            </span>
+          
+        
+      
+    </div>
+
+    
+    
+
+    
+
+
+
+  
+    <p class="note-sm" >
+      파이썬 기초 문법
+
+    </p>
+  
+
+
+  </header>
+
+  
+    <h2 id="11-벡터의-노름">1.1 벡터의 노름</h2>
+
+<ul>
+  <li>벡터의 노름(norm)은 <strong>원점에서부터의 거리</strong>를 말한다.</li>
+  <li>다양한 형태의 노름(norm)이 존재한다.</li>
+  <li>노름(norm)은 임의의 차원 \(d\)에 대해 성립한다.</li>
+</ul>
+
+<p><br /></p>
+
+<h3 id="111-l_1-노름">1.1.1 \(L_1\) 노름</h3>
+
+<ul>
+  <li>각 성분의 <strong>변화량의 절대값</strong>을 모두 더한다.</li>
+  <li>좌표축을 따라 움직이는 거리</li>
+</ul>
+
+\[||\mathbb{x}||_1 = \sum_{i=1}^d | x_i |\]
+
+<p><br /></p>
+
+<h3 id="112-l_2-노름">1.1.2 \(L_2\) 노름</h3>
+
+<ul>
+  <li>피타고라스 정리를 이용해 <strong>유클리드 거리</strong>를 계산한다.</li>
+  <li>\(L_2\) 노름은 <code class="language-plaintext highlighter-rouge">np.linalg.norm</code> 을 이용해도 구현 가능하다.</li>
+</ul>
+
+\[||\mathbb{x}||_2 = \sqrt{\sum_{i=1}^d {| x_i |}^2}\]
+
+<p><br /></p>
+
+<h3 id="113-왜-다른-노름을-소개하나">1.1.3 왜 다른 노름을 소개하나?</h3>
+
+<ul>
+  <li>노름의 종류에 따라 <strong>기하학적 성질</strong>이 달라진다.</li>
+  <li>머신러닝에선 각 성질들이 필요할 때가 있으므로 둘 다 사용한다.</li>
+</ul>
+
+<p>     
+<img src="https://drive.google.com/uc?id=1sCVlDZIwaVnex_NBZXJO0fBrBJ5kv8Wu" width="600" /></p>
+
+<p><br /></p>
+
+<h2 id="12-두-벡터-사이의-거리">1.2 두 벡터 사이의 거리</h2>
+
+<ul>
+  <li>\(L_1\), \(L_2\) 노름을 이용해 두 벡터 사이의 거리를 계산할 수 있다.</li>
+  <li>두 벡터 사이의 거리를 계산할 때는 <strong>벡터의 뺄셈</strong>을 이용한다.
+    <ul>
+      <li>벡터 \(\mathbb{x}\)와 벡터 \(\mathbb{y}\) 사이의 거리 : \(\|\|\mathbb{y}-\mathbb{x}\|\|=\|\|\mathbb{x}-\mathbb{y}\|\|\)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="13-두-벡터-사이의-각도">1.3 두 벡터 사이의 각도</h2>
+
+<ul>
+  <li>두 벡터 사이의 각도를 구하는 것은 \(L_2\) 노름에서만 가능하다. (\(L_1\) 노름에서는 각도를 계산할 수 없다.)</li>
+  <li>
+    <p><strong>제 2 코사인 법칙</strong>에 의해 두 벡터 사이의 각도를 계산할 수 있다.</p>
+  </li>
+  <li>벡터 \(\mathbb{x}\)와 벡터 \(\mathbb{y}\) 사이의 각도</li>
+</ul>
+
+\[cos \theta = \frac{||\mathbb{x}||_2^2 + ||\mathbb{y}||_2^2 - ||\mathbb{x} - \mathbb{y}||_2^2}{2 ||\mathbb{x}||_2 ||\mathbb{y}||_2}\]
+
+<ul>
+  <li>위 공식의 분자를 쉽계 계산하는 방법이 <strong>내적</strong>이다.</li>
+</ul>
+
+\[cos \theta = 
+\frac{2 &lt;\mathbb{x}, \mathbb{y}&gt;}{2 ||\mathbb{x}||_2 ||\mathbb{y}||_2} =
+\frac{&lt;\mathbb{x}, \mathbb{y}&gt;}{||\mathbb{x}||_2 ||\mathbb{y}||_2}\]
+
+<ul>
+  <li>내적(inner product) 연산</li>
+</ul>
+
+\[&lt;\mathbb{x}, \mathbb{y}&gt; = \sum_{i=1}^d x_i y_i\]
+
+<ul>
+  <li>내적은 <code class="language-plaintext highlighter-rouge">np.inner</code> 응 이용해서 계산한다.</li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="14-내적을-어떻게-해석할까">1.4 내적을 어떻게 해석할까?</h2>
+
+<ul>
+  <li>내적은 <strong>정사영(orthogonal projection)된 벡터의 길이</strong>와 관련 있다.</li>
+</ul>
+
+<p>     
+<img src="https://drive.google.com/uc?id=11QUTwQgzRiEF48e6lP9o2vl62BaiZAu_" width="300" /></p>
+
+<ul>
+  <li>
+    <p>\(Proj(\mathbb{x})\) : 벡터 \(\mathbb{y}\)로 정사영된 벡터 \(\mathbb{x}\)의 <strong>그림자</strong>를 의미</p>
+  </li>
+  <li>
+    <p>\(Proj(\mathbb{x})\) 의 길이는 <strong>코사인법칙</strong>에 의해 \(\|\|\mathbb{x}\|\| cos \theta\) 와 같다.</p>
+  </li>
+</ul>
+
+\[Proj(\mathbb{x}) = \|\|\mathbb{x}\|\| cos \theta\]
+
+<p>     
+<img src="https://drive.google.com/uc?id=11PA5Crp6xoJwdU8zL1rkHp_Qtg0J0ASt" width="300" /></p>
+
+<ul>
+  <li>내적은 정사영된 벡터의 길이를 <strong>벡터 \(\mathbb{y}\) 의 길이 \(\|\|\mathbb{y}\|\|\) 만큼 조정</strong>한 값이다.</li>
+</ul>
+
+<p>     
+<img src="https://drive.google.com/uc?id=1aQpdPdO2hv8lEo9We2zv59skwNOTVTtO" width="300" /></p>
+
+<ul>
+  <li>내적은 두 벡터의 <strong>유사도(similarity)</strong>를 측정하는 데 사용 가능하다.</li>
+</ul>
+
+  
+</article>
+:ET

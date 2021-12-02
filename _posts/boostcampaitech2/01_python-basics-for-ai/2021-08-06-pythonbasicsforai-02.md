@@ -14,6 +14,9 @@ published: true
 
 # 2. [Python Basics for AI] 2. 파이썬 기초 문법
 
+* toc
+  {:toc}
+
 ## 2.1 변수 (Variables)
 
 생략
