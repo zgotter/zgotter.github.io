@@ -1,9 +1,12 @@
 ---
 layout: page
-title: Thank You!
+title: zgotter의 블로그
 sitemap: false
 ---
 
+<img src="/assets/img/personal/white.jpg" width=700 >
+
+<!-- 
 Thank you for buying the PRO version of Hydejack! 🎉
 
 More than one year ago I was looking for a blogging platform but couldn't find it:
@@ -44,4 +47,4 @@ containing example content:
 [documentation]: docs/README.md
 [install]: docs/install.md
 [upgrade]: docs/upgrade.md
-[config]: docs/config.md
+[config]: docs/config.md -->
