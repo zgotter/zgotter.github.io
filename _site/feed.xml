@@ -1,5 +1,284 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR, en-US"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko-KR, en-US" /><updated>2021-12-02T13:23:57+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">zgotter’s blog</title><subtitle>학습 내용을 정리한 블로그 입니다.
-</subtitle><author><name>김성한</name><email>shkim4738@gmail.com</email></author><entry><title type="html">What’s New in Hydejack 9.1?</title><link href="http://localhost:4000/blog/example/2021-02-13-whats-new-in-hydejack-9-1/" rel="alternate" type="text/html" title="What’s New in Hydejack 9.1?" /><published>2021-02-13T00:00:00+09:00</published><updated>2021-02-13T00:00:00+09:00</updated><id>http://localhost:4000/blog/example/whats-new-in-hydejack-9-1</id><content type="html" xml:base="http://localhost:4000/blog/example/2021-02-13-whats-new-in-hydejack-9-1/">&lt;p&gt;What’s New in Hydejack 9.1?&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR, en-US"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko-KR, en-US" /><updated>2021-12-02T14:05:22+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">zgotter’s blog</title><subtitle>학습 내용을 정리한 블로그 입니다.
+</subtitle><author><name>김성한</name><email>shkim4738@gmail.com</email></author><entry><title type="html">[Python Basics for AI] 2. 파이썬 기초 문법</title><link href="http://localhost:4000/blog/pythonbasicsforai/2021-08-06-pythonbasicsforai-02/" rel="alternate" type="text/html" title="[Python Basics for AI] 2. 파이썬 기초 문법" /><published>2021-08-06T00:00:00+09:00</published><updated>2021-08-06T00:00:00+09:00</updated><id>http://localhost:4000/blog/pythonbasicsforai/pythonbasicsforai-02</id><content type="html" xml:base="http://localhost:4000/blog/pythonbasicsforai/2021-08-06-pythonbasicsforai-02/">&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#21-변수-variables&quot; id=&quot;markdown-toc-21-변수-variables&quot;&gt;2.1 변수 (Variables)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#22-함수와-콘솔-io-function-and-console-io&quot; id=&quot;markdown-toc-22-함수와-콘솔-io-function-and-console-io&quot;&gt;2.2 함수와 콘솔 I/O (Function and Console I/O)&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#221-함수&quot; id=&quot;markdown-toc-221-함수&quot;&gt;2.2.1 함수&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#23-conditionals-and-loops&quot; id=&quot;markdown-toc-23-conditionals-and-loops&quot;&gt;2.3 Conditionals and Loops&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#24-string-and-advanced-function-concept&quot; id=&quot;markdown-toc-24-string-and-advanced-function-concept&quot;&gt;2.4 String and advanced function concept&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#241-function-type-hints&quot; id=&quot;markdown-toc-241-function-type-hints&quot;&gt;2.4.1 function type hints&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#242-function-docstring&quot; id=&quot;markdown-toc-242-function-docstring&quot;&gt;2.4.2 function docstring&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#243-함수-작성-가이드-라인&quot; id=&quot;markdown-toc-243-함수-작성-가이드-라인&quot;&gt;2.4.3 함수 작성 가이드 라인&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;21-변수-variables&quot;&gt;2.1 변수 (Variables)&lt;/h2&gt;
+
+&lt;p&gt;생략&lt;/p&gt;
+
+&lt;h2 id=&quot;22-함수와-콘솔-io-function-and-console-io&quot;&gt;2.2 함수와 콘솔 I/O (Function and Console I/O)&lt;/h2&gt;
+
+&lt;h3 id=&quot;221-함수&quot;&gt;2.2.1 함수&lt;/h3&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# 151
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;151
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;23-conditionals-and-loops&quot;&gt;2.3 Conditionals and Loops&lt;/h2&gt;
+
+&lt;p&gt;생략&lt;/p&gt;
+
+&lt;h2 id=&quot;24-string-and-advanced-function-concept&quot;&gt;2.4 String and advanced function concept&lt;/h2&gt;
+
+&lt;h3 id=&quot;241-function-type-hints&quot;&gt;2.4.1 function type hints&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;파이썬의 가장 큰 특징 : dynamic typing
+    &lt;ul&gt;
+      &lt;li&gt;처음 함수를 사용하는 사용자가 interface를 알기 어렵다는 단점이 있음&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;python 3.5 버전 이후로는 PEP 484 에 기반하여 type hints 기능 제공&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;do_function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;var_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;var_type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;return_type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;pass&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;type_hint_example&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# (파라미터명: 타입) -&amp;gt; 리턴 타입
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;sa&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;type_hint_example&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'sunghan'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;'Hello, sunghan'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Type hints의 장점&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;사용자에게 인터페이스를 명확히 알려줄 수 있다.&lt;/li&gt;
+  &lt;li&gt;함수의 문서화 시 parameter에 대한 정보를 명확히 알 수 있다.&lt;/li&gt;
+  &lt;li&gt;mypy 또는 IDE, linter 등을 통해 코드의 발생 가능한 오류를 사전에 확인&lt;/li&gt;
+  &lt;li&gt;시스템 전체적인 안정성을 확보할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;242-function-docstring&quot;&gt;2.4.2 function docstring&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;파이썬 함수에 대한 상세스펙을 사전에 작성 (함수 사용자의 이해도 up)&lt;/li&gt;
+  &lt;li&gt;세개의 따옴표로 docstring 영역 표시 (함수명 아래)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;kos_root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;Return the pathname of the KOS root directory.&quot;&quot;&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;global&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_kos_root&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_kos_root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_kos_root&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;add_binary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;s&quot;&gt;&quot;&quot;&quot;
+    Returns the sum of two decimal numbers in binary digits.
+
+        Parameters:
+            a (int): A decimal integer
+            b (int): Another decimal integer
+
+        Returns:
+            binary_sum (str): Binary string of the sum of a and b
+
+        Examples:
+            a = 10, b = 15
+            binary_sum = &quot;11001&quot;
+
+    &quot;&quot;&quot;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;binary_sum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;bin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:]&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;binary_sum&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;add_binary&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;11001
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;vscode 의 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Python Docstring Generator&lt;/code&gt; extensions 를 설치하면 손쉽게 docstring 을 작성할 수 있다.
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Ctrl + Shift + P&lt;/code&gt; -&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Generate Docstring&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;243-함수-작성-가이드-라인&quot;&gt;2.4.3 함수 작성 가이드 라인&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;가능하면 짧게 작성&lt;/li&gt;
+  &lt;li&gt;함수명은 소문자로 구성, 필요하면 밑줄로 나눔&lt;/li&gt;
+  &lt;li&gt;함수 이름에 함수의 역할, 의도가 명확히 들어낼 것
+    &lt;ul&gt;
+      &lt;li&gt;v, o : ~를 한다.&lt;/li&gt;
+      &lt;li&gt;띄어쓰기는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_&lt;/code&gt; 사용&lt;/li&gt;
+      &lt;li&gt;ex) &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;print_hello_world()&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;하나의 함수에는 유사한 역할을 하는 코드만 포함&lt;/li&gt;
+  &lt;li&gt;인자로 받은 값 자체를 바꾸진 말 것 (임시 변수 선언)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>zgotter</name></author><category term="pythonbasicsforai" /><summary type="html"></summary></entry><entry><title type="html">[AI Math] 1. 벡터</title><link href="http://localhost:4000/blog/aimath/2021-08-06-aimath-01/" rel="alternate" type="text/html" title="[AI Math] 1. 벡터" /><published>2021-08-06T00:00:00+09:00</published><updated>2021-08-06T00:00:00+09:00</updated><id>http://localhost:4000/blog/aimath/aimath-01</id><content type="html" xml:base="http://localhost:4000/blog/aimath/2021-08-06-aimath-01/">&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#11-벡터의-노름&quot; id=&quot;markdown-toc-11-벡터의-노름&quot;&gt;1.1 벡터의 노름&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#111-l_1-노름&quot; id=&quot;markdown-toc-111-l_1-노름&quot;&gt;1.1.1 \(L_1\) 노름&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#112-l_2-노름&quot; id=&quot;markdown-toc-112-l_2-노름&quot;&gt;1.1.2 \(L_2\) 노름&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#113-왜-다른-노름을-소개하나&quot; id=&quot;markdown-toc-113-왜-다른-노름을-소개하나&quot;&gt;1.1.3 왜 다른 노름을 소개하나?&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#12-두-벡터-사이의-거리&quot; id=&quot;markdown-toc-12-두-벡터-사이의-거리&quot;&gt;1.2 두 벡터 사이의 거리&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#13-두-벡터-사이의-각도&quot; id=&quot;markdown-toc-13-두-벡터-사이의-각도&quot;&gt;1.3 두 벡터 사이의 각도&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#14-내적을-어떻게-해석할까&quot; id=&quot;markdown-toc-14-내적을-어떻게-해석할까&quot;&gt;1.4 내적을 어떻게 해석할까?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;11-벡터의-노름&quot;&gt;1.1 벡터의 노름&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;벡터의 노름(norm)은 &lt;strong&gt;원점에서부터의 거리&lt;/strong&gt;를 말한다.&lt;/li&gt;
+  &lt;li&gt;다양한 형태의 노름(norm)이 존재한다.&lt;/li&gt;
+  &lt;li&gt;노름(norm)은 임의의 차원 \(d\)에 대해 성립한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;111-l_1-노름&quot;&gt;1.1.1 \(L_1\) 노름&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;각 성분의 &lt;strong&gt;변화량의 절대값&lt;/strong&gt;을 모두 더한다.&lt;/li&gt;
+  &lt;li&gt;좌표축을 따라 움직이는 거리&lt;/li&gt;
+&lt;/ul&gt;
+
+\[||\mathbb{x}||_1 = \sum_{i=1}^d | x_i |\]
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;112-l_2-노름&quot;&gt;1.1.2 \(L_2\) 노름&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;피타고라스 정리를 이용해 &lt;strong&gt;유클리드 거리&lt;/strong&gt;를 계산한다.&lt;/li&gt;
+  &lt;li&gt;\(L_2\) 노름은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;np.linalg.norm&lt;/code&gt; 을 이용해도 구현 가능하다.&lt;/li&gt;
+&lt;/ul&gt;
+
+\[||\mathbb{x}||_2 = \sqrt{\sum_{i=1}^d {| x_i |}^2}\]
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;113-왜-다른-노름을-소개하나&quot;&gt;1.1.3 왜 다른 노름을 소개하나?&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;노름의 종류에 따라 &lt;strong&gt;기하학적 성질&lt;/strong&gt;이 달라진다.&lt;/li&gt;
+  &lt;li&gt;머신러닝에선 각 성질들이 필요할 때가 있으므로 둘 다 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;     
+&lt;img src=&quot;https://drive.google.com/uc?id=1sCVlDZIwaVnex_NBZXJO0fBrBJ5kv8Wu&quot; width=&quot;600&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;12-두-벡터-사이의-거리&quot;&gt;1.2 두 벡터 사이의 거리&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;\(L_1\), \(L_2\) 노름을 이용해 두 벡터 사이의 거리를 계산할 수 있다.&lt;/li&gt;
+  &lt;li&gt;두 벡터 사이의 거리를 계산할 때는 &lt;strong&gt;벡터의 뺄셈&lt;/strong&gt;을 이용한다.
+    &lt;ul&gt;
+      &lt;li&gt;벡터 \(\mathbb{x}\)와 벡터 \(\mathbb{y}\) 사이의 거리 : \(\|\|\mathbb{y}-\mathbb{x}\|\|=\|\|\mathbb{x}-\mathbb{y}\|\|\)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;13-두-벡터-사이의-각도&quot;&gt;1.3 두 벡터 사이의 각도&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;두 벡터 사이의 각도를 구하는 것은 \(L_2\) 노름에서만 가능하다. (\(L_1\) 노름에서는 각도를 계산할 수 없다.)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;제 2 코사인 법칙&lt;/strong&gt;에 의해 두 벡터 사이의 각도를 계산할 수 있다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;벡터 \(\mathbb{x}\)와 벡터 \(\mathbb{y}\) 사이의 각도&lt;/li&gt;
+&lt;/ul&gt;
+
+\[cos \theta = \frac{||\mathbb{x}||_2^2 + ||\mathbb{y}||_2^2 - ||\mathbb{x} - \mathbb{y}||_2^2}{2 ||\mathbb{x}||_2 ||\mathbb{y}||_2}\]
+
+&lt;ul&gt;
+  &lt;li&gt;위 공식의 분자를 쉽계 계산하는 방법이 &lt;strong&gt;내적&lt;/strong&gt;이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+\[cos \theta = 
+\frac{2 &amp;lt;\mathbb{x}, \mathbb{y}&amp;gt;}{2 ||\mathbb{x}||_2 ||\mathbb{y}||_2} =
+\frac{&amp;lt;\mathbb{x}, \mathbb{y}&amp;gt;}{||\mathbb{x}||_2 ||\mathbb{y}||_2}\]
+
+&lt;ul&gt;
+  &lt;li&gt;내적(inner product) 연산&lt;/li&gt;
+&lt;/ul&gt;
+
+\[&amp;lt;\mathbb{x}, \mathbb{y}&amp;gt; = \sum_{i=1}^d x_i y_i\]
+
+&lt;ul&gt;
+  &lt;li&gt;내적은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;np.inner&lt;/code&gt; 응 이용해서 계산한다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;14-내적을-어떻게-해석할까&quot;&gt;1.4 내적을 어떻게 해석할까?&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;내적은 &lt;strong&gt;정사영(orthogonal projection)된 벡터의 길이&lt;/strong&gt;와 관련 있다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;     
+&lt;img src=&quot;https://drive.google.com/uc?id=11QUTwQgzRiEF48e6lP9o2vl62BaiZAu_&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;\(Proj(\mathbb{x})\) : 벡터 \(\mathbb{y}\)로 정사영된 벡터 \(\mathbb{x}\)의 &lt;strong&gt;그림자&lt;/strong&gt;를 의미&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;\(Proj(\mathbb{x})\) 의 길이는 &lt;strong&gt;코사인법칙&lt;/strong&gt;에 의해 \(\|\|\mathbb{x}\|\| cos \theta\) 와 같다.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+\[Proj(\mathbb{x}) = \|\|\mathbb{x}\|\| cos \theta\]
+
+&lt;p&gt;     
+&lt;img src=&quot;https://drive.google.com/uc?id=11PA5Crp6xoJwdU8zL1rkHp_Qtg0J0ASt&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;내적은 정사영된 벡터의 길이를 &lt;strong&gt;벡터 \(\mathbb{y}\) 의 길이 \(\|\|\mathbb{y}\|\|\) 만큼 조정&lt;/strong&gt;한 값이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;     
+&lt;img src=&quot;https://drive.google.com/uc?id=1aQpdPdO2hv8lEo9We2zv59skwNOTVTtO&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;내적은 두 벡터의 &lt;strong&gt;유사도(similarity)&lt;/strong&gt;를 측정하는 데 사용 가능하다.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>zgotter</name></author><category term="aimath" /><summary type="html"></summary></entry><entry><title type="html">What’s New in Hydejack 9.1?</title><link href="http://localhost:4000/blog/2021-02-13-whats-new-in-hydejack-9-1/" rel="alternate" type="text/html" title="What’s New in Hydejack 9.1?" /><published>2021-02-13T00:00:00+09:00</published><updated>2021-02-13T00:00:00+09:00</updated><id>http://localhost:4000/blog/whats-new-in-hydejack-9-1</id><content type="html" xml:base="http://localhost:4000/blog/2021-02-13-whats-new-in-hydejack-9-1/">&lt;p&gt;What’s New in Hydejack 9.1?&lt;/p&gt;
 
 &lt;ul id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#stripe-ified-design&quot; id=&quot;markdown-toc-stripe-ified-design&quot;&gt;Stripe-ified Design&lt;/a&gt;&lt;/li&gt;
@@ -92,7 +371,7 @@ For more, see &lt;a href=&quot;https://getclaps.app/&quot;&gt;the dedicated webs
 
 &lt;h2 id=&quot;credits&quot;&gt;Credits&lt;/h2&gt;
 
-&lt;p&gt;&lt;span&gt;Photo by &lt;a href=&quot;https://unsplash.com/@jjying?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;JJ Ying&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;</content><author><name>김성한</name><email>shkim4738@gmail.com</email></author><category term="example" /><summary type="html">What’s New in Hydejack 9.1?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/jj-ying.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/jj-ying.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Introducing Hydejack 9</title><link href="http://localhost:4000/blog/example/2020-07-03-introducing-hydejack-9/" rel="alternate" type="text/html" title="Introducing Hydejack 9" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>http://localhost:4000/blog/example/introducing-hydejack-9</id><content type="html" xml:base="http://localhost:4000/blog/example/2020-07-03-introducing-hydejack-9/">&lt;p class=&quot;lead&quot;&gt;Version 9 is the most complete version of Hydejack yet.&lt;/p&gt;
+&lt;p&gt;&lt;span&gt;Photo by &lt;a href=&quot;https://unsplash.com/@jjying?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;JJ Ying&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;</content><author><name>김성한</name><email>shkim4738@gmail.com</email></author><summary type="html">What’s New in Hydejack 9.1?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/jj-ying.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/jj-ying.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Introducing Hydejack 9</title><link href="http://localhost:4000/blog/2020-07-03-introducing-hydejack-9/" rel="alternate" type="text/html" title="Introducing Hydejack 9" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>http://localhost:4000/blog/introducing-hydejack-9</id><content type="html" xml:base="http://localhost:4000/blog/2020-07-03-introducing-hydejack-9/">&lt;p class=&quot;lead&quot;&gt;Version 9 is the most complete version of Hydejack yet.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;#linking-in-style&quot;&gt;Modernized&lt;/a&gt; &lt;a href=&quot;#whats-in-the-cards&quot;&gt;design&lt;/a&gt;, &lt;a href=&quot;#ready-for-the-big-screen&quot;&gt;big headlines&lt;/a&gt;, big new features: &lt;a href=&quot;#built-in-search&quot;&gt;Built-In Search&lt;/a&gt;, &lt;a href=&quot;#sticky-table-of-contents&quot;&gt;Sticky Table of Contents&lt;/a&gt;, and &lt;a href=&quot;#auto-hiding-navbar&quot;&gt;Auto-Hiding Navbar&lt;/a&gt;. That &lt;a href=&quot;#and-much-more&quot;&gt;and more&lt;/a&gt; is Hydejack 9.&lt;/p&gt;
 
@@ -181,7 +460,7 @@ The source code is available on &lt;a href=&quot;https://github.com/hydecorp/hyd
   If you’re technically inclined, you can adopt the code located in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_includes/js/search-worker.js&lt;/code&gt; to your needs. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
-&lt;/div&gt;</content><author><name>김성한</name><email>shkim4738@gmail.com</email></author><category term="example" /><summary type="html">Version 9 is the most complete version of Hydejack yet.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/jeremy-bishop@0,5x.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/jeremy-bishop@0,5x.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Example Content III</title><link href="http://localhost:4000/blog/example/2018-06-01-example-content-iii/" rel="alternate" type="text/html" title="Example Content III" /><published>2018-06-01T00:00:00+09:00</published><updated>2018-06-01T00:00:00+09:00</updated><id>http://localhost:4000/blog/example/example-content-iii</id><content type="html" xml:base="http://localhost:4000/blog/example/2018-06-01-example-content-iii/">&lt;p&gt;Hydejack offers a few additional features to markup your markdown.
+&lt;/div&gt;</content><author><name>김성한</name><email>shkim4738@gmail.com</email></author><summary type="html">Version 9 is the most complete version of Hydejack yet.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/jeremy-bishop@0,5x.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/jeremy-bishop@0,5x.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Example Content III</title><link href="http://localhost:4000/blog/2018-06-01-example-content-iii/" rel="alternate" type="text/html" title="Example Content III" /><published>2018-06-01T00:00:00+09:00</published><updated>2018-06-01T00:00:00+09:00</updated><id>http://localhost:4000/blog/example-content-iii</id><content type="html" xml:base="http://localhost:4000/blog/2018-06-01-example-content-iii/">&lt;p&gt;Hydejack offers a few additional features to markup your markdown.
 Don’t worry, these are merely CSS classes added with kramdown’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{:...}&lt;/code&gt; syntax,
 so that your content remains compatible with other Jekyll themes.&lt;/p&gt;
 
@@ -371,7 +650,7 @@ A caption to an image.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;h2 id=&quot;faded-text&quot;&gt;Faded text&lt;/h2&gt;
-&lt;p class=&quot;faded&quot;&gt;I’m faded, faded, faded.&lt;/p&gt;</content><author><name>김성한</name><email>shkim4738@gmail.com</email></author><category term="example" /><summary type="html">Hydejack offers a few additional features to markup your markdown. Don’t worry, these are merely CSS classes added with kramdown’s {:...} syntax, so that your content remains compatible with other Jekyll themes.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/example-content-iii.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/example-content-iii.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Example Content II</title><link href="http://localhost:4000/blog/example/2017-11-23-example-content-ii/" rel="alternate" type="text/html" title="Example Content II" /><published>2017-11-23T00:00:00+09:00</published><updated>2017-11-23T00:00:00+09:00</updated><id>http://localhost:4000/blog/example/example-content-ii</id><content type="html" xml:base="http://localhost:4000/blog/example/2017-11-23-example-content-ii/">&lt;p&gt;There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.&lt;/p&gt;
+&lt;p class=&quot;faded&quot;&gt;I’m faded, faded, faded.&lt;/p&gt;</content><author><name>김성한</name><email>shkim4738@gmail.com</email></author><summary type="html">Hydejack offers a few additional features to markup your markdown. Don’t worry, these are merely CSS classes added with kramdown’s {:...} syntax, so that your content remains compatible with other Jekyll themes.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/example-content-iii.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/example-content-iii.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Example Content II</title><link href="http://localhost:4000/blog/2017-11-23-example-content-ii/" rel="alternate" type="text/html" title="Example Content II" /><published>2017-11-23T00:00:00+09:00</published><updated>2017-11-23T00:00:00+09:00</updated><id>http://localhost:4000/blog/example-content-ii</id><content type="html" xml:base="http://localhost:4000/blog/2017-11-23-example-content-ii/">&lt;p&gt;There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.&lt;/p&gt;
 
 &lt;p&gt;There should be whitespace between paragraphs.&lt;/p&gt;
 
@@ -554,7 +833,7 @@ A caption to an image.&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;The final element.
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>김성한</name><email>shkim4738@gmail.com</email></author><category term="example" /><summary type="html">There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/example-content-ii.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/example-content-ii.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Example Content</title><link href="http://localhost:4000/blog/example/2012-02-07-example-content/" rel="alternate" type="text/html" title="Example Content" /><published>2012-02-07T00:00:00+09:00</published><updated>2012-02-07T00:00:00+09:00</updated><id>http://localhost:4000/blog/example/example-content</id><content type="html" xml:base="http://localhost:4000/blog/example/2012-02-07-example-content/">&lt;p&gt;Cum sociis natoque penatibus et magnis &lt;a href=&quot;#&quot;&gt;dis parturient montes&lt;/a&gt;, nascetur ridiculus mus. &lt;em&gt;Aenean eu leo quam.&lt;/em&gt; Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>김성한</name><email>shkim4738@gmail.com</email></author><summary type="html">There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/example-content-ii.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/example-content-ii.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Example Content</title><link href="http://localhost:4000/blog/2012-02-07-example-content/" rel="alternate" type="text/html" title="Example Content" /><published>2012-02-07T00:00:00+09:00</published><updated>2012-02-07T00:00:00+09:00</updated><id>http://localhost:4000/blog/example-content</id><content type="html" xml:base="http://localhost:4000/blog/2012-02-07-example-content/">&lt;p&gt;Cum sociis natoque penatibus et magnis &lt;a href=&quot;#&quot;&gt;dis parturient montes&lt;/a&gt;, nascetur ridiculus mus. &lt;em&gt;Aenean eu leo quam.&lt;/em&gt; Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.&lt;/p&gt;
@@ -686,4 +965,4 @@ A caption to an image.&lt;/p&gt;
   &lt;/tfoot&gt;
 &lt;/table&gt;
 
-&lt;p&gt;Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.&lt;/p&gt;</content><author><name>김성한</name><email>shkim4738@gmail.com</email></author><category term="example" /><summary type="html">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</summary></entry></feed>
+&lt;p&gt;Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.&lt;/p&gt;</content><author><name>김성한</name><email>shkim4738@gmail.com</email></author><summary type="html">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</summary></entry></feed>
