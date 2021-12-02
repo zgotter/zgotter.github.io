@@ -48,16 +48,16 @@ author:
 
 # Add links to the sidebar.
 menu:
-  - title:             Resume
-    url:               /resume/
   - title:             Blog
     url:               /blog/
   - title:             Categories
     url:               /categories/
   - title:             Projects
     url:               /projects/
-  - title:             Documentation
-    url:               /docs/
+  - title:             Resume
+    url:               /resume/
+  # - title:             Documentation
+  #   url:               /docs/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..

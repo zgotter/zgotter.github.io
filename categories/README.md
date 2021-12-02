@@ -7,11 +7,11 @@ sitemap: true
 permalink: /categories/
 ---
 
-## Example
+<!-- ## Example
 
 * [Example]{:.heading.flip-title} --- 샘플
 
-[Example]: /blog/example/
+[Example]: /blog/example/ -->
 
 ## Boostcamp AI Tech 2기
 
