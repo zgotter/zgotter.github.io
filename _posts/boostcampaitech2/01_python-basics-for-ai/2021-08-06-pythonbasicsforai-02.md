@@ -1,6 +1,12 @@
 ---
 layout: post
 title: "[Python Basics for AI] 2. 파이썬 기초 문법"
+image: /assets/img/boostcampaitech2/cover.png
+accent_image: 
+  background: url('/assets/img/boostcampaitech2/cover.png') center/cover
+  overlay: false
+accent_color: '#ccc'
+theme_color: '#ccc'
 description: >
   파이썬 기초 문법
 categories:
