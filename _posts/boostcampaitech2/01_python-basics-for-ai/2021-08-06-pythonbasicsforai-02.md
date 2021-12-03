@@ -10,6 +10,7 @@ theme_color: '#ccc'
 description: >
   파이썬 기초 문법
 categories:
+  - boostcampaitech2
   - pythonbasicsforai
 author: zgotter
 sitemap: false

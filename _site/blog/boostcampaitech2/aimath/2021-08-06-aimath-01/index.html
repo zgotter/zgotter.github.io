@@ -20,22 +20,24 @@
   
     
 <!-- Begin Jekyll SEO tag v2.7.1 -->
-<title>Boostcamp AI Tech 2 | zgotter’s blog</title>
+<title>[AI Math] 1. 벡터 | zgotter’s blog</title>
 <meta name="generator" content="Jekyll v3.9.0" />
-<meta property="og:title" content="Boostcamp AI Tech 2" />
-<meta name="author" content="김성한" />
+<meta property="og:title" content="[AI Math] 1. 벡터" />
+<meta name="author" content="zgotter" />
 <meta property="og:locale" content="ko_KR, en_US" />
-<meta name="description" content="부스트캠프 AI Tech 2기" />
-<meta property="og:description" content="부스트캠프 AI Tech 2기" />
-<link rel="canonical" href="http://localhost:4000/boostcampaitech2/" />
-<meta property="og:url" content="http://localhost:4000/boostcampaitech2/" />
+<meta name="description" content="벡터" />
+<meta property="og:description" content="벡터" />
+<link rel="canonical" href="http://localhost:4000/blog/boostcampaitech2/aimath/2021-08-06-aimath-01/" />
+<meta property="og:url" content="http://localhost:4000/blog/boostcampaitech2/aimath/2021-08-06-aimath-01/" />
 <meta property="og:site_name" content="zgotter’s blog" />
+<meta property="og:image" content="http://localhost:4000/assets/img/boostcampaitech2/cover.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2021-12-03T13:04:56+09:00" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Boostcamp AI Tech 2" />
+<meta property="article:published_time" content="2021-08-06T00:00:00+09:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/img/boostcampaitech2/cover.png" />
+<meta property="twitter:title" content="[AI Math] 1. 벡터" />
 <script type="application/ld+json">
-{"datePublished":"2021-12-03T13:04:56+09:00","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/zgotter.JPG"},"name":"김성한"},"dateModified":"2021-12-03T13:04:56+09:00","url":"http://localhost:4000/boostcampaitech2/","author":{"@type":"Person","name":"김성한"},"description":"부스트캠프 AI Tech 2기","@type":"WebPage","headline":"Boostcamp AI Tech 2","@context":"https://schema.org"}</script>
+{"datePublished":"2021-08-06T00:00:00+09:00","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/zgotter.JPG"},"name":"zgotter"},"dateModified":"2021-08-06T00:00:00+09:00","url":"http://localhost:4000/blog/boostcampaitech2/aimath/2021-08-06-aimath-01/","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/boostcampaitech2/aimath/2021-08-06-aimath-01/"},"image":"http://localhost:4000/assets/img/boostcampaitech2/cover.png","author":{"@type":"Person","name":"zgotter"},"description":"벡터","@type":"BlogPosting","headline":"[AI Math] 1. 벡터","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -45,7 +47,7 @@
 
 
 
-  <meta name="theme-color" content="rgb(25,55,71)">
+  <meta name="theme-color" content="#ccc">
 
 
 <meta charset="utf-8">
@@ -63,7 +65,7 @@
 <meta name="generator" content="Hydejack v9.1.5" />
 
 
-<link rel="alternate" href="http://localhost:4000/boostcampaitech2/" hreflang="ko-kr, en-us">
+<link rel="alternate" href="http://localhost:4000/blog/boostcampaitech2/aimath/2021-08-06-aimath-01/" hreflang="ko-kr, en-us">
 
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="zgotter's blog" />
 
@@ -102,7 +104,7 @@
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2021-12-03T13:04:56+09:00',
+    INDEX_KEY: 'index--2021-12-03T17:41:50+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -126,7 +128,7 @@
 
   <style id="_pageStyle">
 
-html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);--accent-color-highlight: rgba(79,177,186,0.1);--accent-color-darkened: #409ba3;--theme-color: rgb(25,55,71);--dark-mode-body-bg: #2a2d2f;--dark-mode-border-color: #363a3d}
+html{--accent-color: #ccc;--accent-color-faded: rgba(204,204,204,0.5);--accent-color-highlight: rgba(204,204,204,0.1);--accent-color-darkened: #b9b9b9;--theme-color: #ccc;--dark-mode-body-bg: #2d2d2d;--dark-mode-border-color: #393939}
 
 </style>
 
@@ -176,7 +178,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
   <main
   id="_main"
-  class="content layout-list"
+  class="content layout-post"
   role="main"
 >
   <nav id="breadcrumbs" class="screen-only"><ul>
@@ -187,22 +189,99 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
       <li>
         
           <span>/</span>
-          <span>boostcampaitech2</span>
+          
+          
+          <a href="/blog/">blog</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/blog/boostcampaitech2/">boostcampaitech2</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/blog/boostcampaitech2/aimath/">aimath</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          <span>2021-08-06-aimath-01</span>
         
       </li>
     
   
 </ul></nav>
-  <article class="page mb6" role="article">
+  
+
+
+
+
+
+
+
+
+
+
+<article id="post-blog-boostcampaitech2-aimath-aimath-01" class="page post mb6" role="article">
   <header>
-    <h1 class="page-title">Boostcamp AI Tech 2</h1>
+    <h1 class="post-title flip-project-title">
+      
+        [AI Math] 1. 벡터
+      
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2021-08-06T00:00:00+09:00">06 Aug 2021</time> in <a href="/blog/boostcampaitech2/" class="flip-title">Boostcamp AI Tech 2</a> / <a href="/blog/aimath/" class="flip-title">AI Math</a> 
+      </span>
+      
+        
+      
+    </div>
+
+    
+    
+      
+        <div class="img-wrapper lead aspect-ratio sixteen-nine flip-project-img">
+          
+
+
+<img
+  
+    src="/assets/img/boostcampaitech2/cover.png"
+  
+  alt="[AI Math] 1. 벡터"
+  
+  
+  width="864"
+  height="486"
+  loading="lazy"
+/>
+
+        </div>
+      
+      
+    
+
     
 
 
 
   
     <p class="note-sm" >
-      부스트캠프 AI Tech 2기
+      벡터
 
     </p>
   
@@ -210,61 +289,319 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
   </header>
 
-  <h2 id="u-stage">U stage</h2>
-
-<ul>
-  <li><a href="/blog/pythonbasicsforai/" class="heading flip-title">Python Basics for AI</a> — AI를 위한 파이썬 기초</li>
-  <li><a href="/blog/aimath/" class="heading flip-title">AI Math</a> — AI를 위한 수학</li>
+  
+    <ul id="markdown-toc">
+  <li><a href="#11-벡터의-노름" id="markdown-toc-11-벡터의-노름">1.1 벡터의 노름</a>    <ul>
+      <li><a href="#111-l_1-노름" id="markdown-toc-111-l_1-노름">1.1.1 \(L_1\) 노름</a></li>
+      <li><a href="#112-l_2-노름" id="markdown-toc-112-l_2-노름">1.1.2 \(L_2\) 노름</a></li>
+      <li><a href="#113-왜-다른-노름을-소개하나" id="markdown-toc-113-왜-다른-노름을-소개하나">1.1.3 왜 다른 노름을 소개하나?</a></li>
+    </ul>
+  </li>
+  <li><a href="#12-두-벡터-사이의-거리" id="markdown-toc-12-두-벡터-사이의-거리">1.2 두 벡터 사이의 거리</a></li>
+  <li><a href="#13-두-벡터-사이의-각도" id="markdown-toc-13-두-벡터-사이의-각도">1.3 두 벡터 사이의 각도</a></li>
+  <li><a href="#14-내적을-어떻게-해석할까" id="markdown-toc-14-내적을-어떻게-해석할까">1.4 내적을 어떻게 해석할까?</a></li>
 </ul>
 
+<h2 id="11-벡터의-노름">1.1 벡터의 노름</h2>
 
+<ul>
+  <li>벡터의 노름(norm)은 <strong>원점에서부터의 거리</strong>를 말한다.</li>
+  <li>다양한 형태의 노름(norm)이 존재한다.</li>
+  <li>노름(norm)은 임의의 차원 \(d\)에 대해 성립한다.</li>
+</ul>
 
+<p><br /></p>
 
+<h3 id="111-l_1-노름">1.1.1 \(L_1\) 노름</h3>
 
+<ul>
+  <li>각 성분의 <strong>변화량의 절대값</strong>을 모두 더한다.</li>
+  <li>좌표축을 따라 움직이는 거리</li>
+</ul>
 
+\[||\mathbb{x}||_1 = \sum_{i=1}^d | x_i |\]
 
+<p><br /></p>
 
+<h3 id="112-l_2-노름">1.1.2 \(L_2\) 노름</h3>
 
+<ul>
+  <li>피타고라스 정리를 이용해 <strong>유클리드 거리</strong>를 계산한다.</li>
+  <li>\(L_2\) 노름은 <code class="language-plaintext highlighter-rouge">np.linalg.norm</code> 을 이용해도 구현 가능하다.</li>
+</ul>
 
+\[||\mathbb{x}||_2 = \sqrt{\sum_{i=1}^d {| x_i |}^2}\]
 
+<p><br /></p>
+
+<h3 id="113-왜-다른-노름을-소개하나">1.1.3 왜 다른 노름을 소개하나?</h3>
+
+<ul>
+  <li>노름의 종류에 따라 <strong>기하학적 성질</strong>이 달라진다.</li>
+  <li>머신러닝에선 각 성질들이 필요할 때가 있으므로 둘 다 사용한다.</li>
+</ul>
+
+<p>     
+<img src="https://drive.google.com/uc?id=1sCVlDZIwaVnex_NBZXJO0fBrBJ5kv8Wu" width="600" /></p>
+
+<p><br /></p>
+
+<h2 id="12-두-벡터-사이의-거리">1.2 두 벡터 사이의 거리</h2>
+
+<ul>
+  <li>\(L_1\), \(L_2\) 노름을 이용해 두 벡터 사이의 거리를 계산할 수 있다.</li>
+  <li>두 벡터 사이의 거리를 계산할 때는 <strong>벡터의 뺄셈</strong>을 이용한다.
+    <ul>
+      <li>벡터 \(\mathbb{x}\)와 벡터 \(\mathbb{y}\) 사이의 거리 : \(\|\|\mathbb{y}-\mathbb{x}\|\|=\|\|\mathbb{x}-\mathbb{y}\|\|\)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="13-두-벡터-사이의-각도">1.3 두 벡터 사이의 각도</h2>
+
+<ul>
+  <li>두 벡터 사이의 각도를 구하는 것은 \(L_2\) 노름에서만 가능하다. (\(L_1\) 노름에서는 각도를 계산할 수 없다.)</li>
+  <li>
+    <p><strong>제 2 코사인 법칙</strong>에 의해 두 벡터 사이의 각도를 계산할 수 있다.</p>
+  </li>
+  <li>벡터 \(\mathbb{x}\)와 벡터 \(\mathbb{y}\) 사이의 각도</li>
+</ul>
+
+\[cos \theta = \frac{||\mathbb{x}||_2^2 + ||\mathbb{y}||_2^2 - ||\mathbb{x} - \mathbb{y}||_2^2}{2 ||\mathbb{x}||_2 ||\mathbb{y}||_2}\]
+
+<ul>
+  <li>위 공식의 분자를 쉽계 계산하는 방법이 <strong>내적</strong>이다.</li>
+</ul>
+
+\[cos \theta = 
+\frac{2 &lt;\mathbb{x}, \mathbb{y}&gt;}{2 ||\mathbb{x}||_2 ||\mathbb{y}||_2} =
+\frac{&lt;\mathbb{x}, \mathbb{y}&gt;}{||\mathbb{x}||_2 ||\mathbb{y}||_2}\]
+
+<ul>
+  <li>내적(inner product) 연산</li>
+</ul>
+
+\[&lt;\mathbb{x}, \mathbb{y}&gt; = \sum_{i=1}^d x_i y_i\]
+
+<ul>
+  <li>내적은 <code class="language-plaintext highlighter-rouge">np.inner</code> 응 이용해서 계산한다.</li>
+</ul>
+
+<p><br /></p>
+
+<h2 id="14-내적을-어떻게-해석할까">1.4 내적을 어떻게 해석할까?</h2>
+
+<ul>
+  <li>내적은 <strong>정사영(orthogonal projection)된 벡터의 길이</strong>와 관련 있다.</li>
+</ul>
+
+<p>     
+<img src="https://drive.google.com/uc?id=11QUTwQgzRiEF48e6lP9o2vl62BaiZAu_" width="300" /></p>
+
+<ul>
+  <li>
+    <p>\(Proj(\mathbb{x})\) : 벡터 \(\mathbb{y}\)로 정사영된 벡터 \(\mathbb{x}\)의 <strong>그림자</strong>를 의미</p>
+  </li>
+  <li>
+    <p>\(Proj(\mathbb{x})\) 의 길이는 <strong>코사인법칙</strong>에 의해 \(\|\|\mathbb{x}\|\| cos \theta\) 와 같다.</p>
+  </li>
+</ul>
+
+\[Proj(\mathbb{x}) = \|\|\mathbb{x}\|\| cos \theta\]
+
+<p>     
+<img src="https://drive.google.com/uc?id=11PA5Crp6xoJwdU8zL1rkHp_Qtg0J0ASt" width="300" /></p>
+
+<ul>
+  <li>내적은 정사영된 벡터의 길이를 <strong>벡터 \(\mathbb{y}\) 의 길이 \(\|\|\mathbb{y}\|\|\) 만큼 조정</strong>한 값이다.</li>
+</ul>
+
+<p>     
+<img src="https://drive.google.com/uc?id=1aQpdPdO2hv8lEo9We2zv59skwNOTVTtO" width="300" /></p>
+
+<ul>
+  <li>내적은 두 벡터의 <strong>유사도(similarity)</strong>를 측정하는 데 사용 가능하다.</li>
+</ul>
 
   
-  
-    
-    <h2 id="y-2021" class="hr-bottom">2021</h2>
-    <ul class="related-posts">
-    
-  
-  
-
-
-<li class="h4">
-  <a href="/blog/aimath/2021-08-06-aimath-01/" class="flip-title"><span>[AI Math] 1. 벡터</span></a>
-  <time class="faded fine" datetime="2021-08-06T00:00:00+09:00">06 Aug</time>
-</li>
-
-  
-
-  
-  
-  
-
-
-<li class="h4">
-  <a href="/blog/pythonbasicsforai/2021-08-06-pythonbasicsforai-02/" class="flip-title"><span>[Python Basics for AI] 2. 파이썬 기초 문법</span></a>
-  <time class="faded fine" datetime="2021-08-06T00:00:00+09:00">06 Aug</time>
-</li>
-
-  </ul>
-
-
 </article>
+
 
 
   <hr class="dingbat related mb6" />
 
 
 
+
+
+
+  
+     
+
+
+  <aside class="about related mt4 mb4" role="complementary">
+    
+    
+
+<div class="author mt4">
+  
+
+  
+    
+
+
+<img
+  
+    src="/assets/img/zgotter.JPG"
+    srcset="/assets/img/zgotter.JPG 1x,/assets/img/zgotter.JPG 2x"
+    
+  
+  alt="김성한"
+  class="avatar"
+  
+  width="120"
+  height="120"
+  loading="lazy"
+/>
+
+  
+
+  
+  
+  <h2  class="page-title hr-bottom">
+    About
+  </h2>
+
+  <p>데이터 엔지니어를 꿈꾸는 개발자</p>
+
+
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://instagram.com/haanneeeee" title="Instagram" class="no-mark-external">
+      <span class="icon-instagram"></span>
+      <span class="sr-only">Instagram</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/zgotter" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:shkim4738@gmail.com" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+
+  </aside>
+
+
+  
+
+  
+    
+
+
+  
+
+  
+    
+
+
+  <aside class="other-projects related mb0" role="complementary">  <h2>Related Posts</h2>  <div class="columns">          <div class="column column-1-2">                  <article class="project-card">  <a href="/blog/boostcampaitech2/pythonbasicsforai/2021-08-06-pythonbasicsforai-02/" class="no-hover no-print-link flip-project" tabindex="-1">    <div class="project-card-img aspect-ratio sixteen-nine flip-project-img">              <img      src="/assets/img/boostcampaitech2/cover.png"    alt="[Python Basics for AI] 2. 파이썬 기초 문법"      width="864"  height="486"  loading="lazy"/>          </div>  </a>  <h3 class="project-card-title flip-project-title">    <a href="/blog/boostcampaitech2/pythonbasicsforai/2021-08-06-pythonbasicsforai-02/" class="flip-title">[Python Basics for AI] 2. 파이썬 기초 문법</a>  </h3>      <p class="project-card-text fine" property="disambiguatingDescription">      파이썬 기초 문법    </p>      <a class="fill-card no-hover" href="/blog/boostcampaitech2/pythonbasicsforai/2021-08-06-pythonbasicsforai-02/" tabindex="-1"><span class="sr-only">Continue reading [Python Basics for AI] 2. 파이썬 기초 문법</span></a></article>              </div>      </div></aside>
+
+  
+
+  
+    
+
+
+  <aside class="related mb4" role="complementary">  <h2 class="hr-bottom">Random Posts</h2>  <ul class="related-posts">          <li class="h4">  <a href="/blog/boostcampaitech2/pythonbasicsforai/2021-08-06-pythonbasicsforai-02/" class="flip-title"><span>[Python Basics for AI] 2. 파이썬 기초 문법</span></a>  <time class="faded fine" datetime="2021-08-06T00:00:00+09:00">06 Aug 2021</time></li>      </ul></aside>
+
+  
+
+  
+    
+<aside class="comments related" role="complementary">
+  <h2 class="hr-bottom">Comments</h2>
+  <script src="https://utteranc.es/client.js"
+        repo="zgotter/blog-comments"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</aside>
+
+
+  
 
 
   
@@ -296,7 +633,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79,177,186,0.5);
 
 
 
-<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+<div class="sidebar-bg " style="background:url('/assets/img/boostcampaitech2/cover.png') center/cover"></div>
 
     <div class="sidebar-sticky">
   <div class="sidebar-about">

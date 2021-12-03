@@ -15,7 +15,7 @@ permalink: /categories/
 
 * [Boostcamp AI Tech 2]{:.heading.flip-title} --- 부스트캠프 AI Tech 2기
 
-[Boostcamp AI Tech 2]: /boostcampaitech2/
+[Boostcamp AI Tech 2]: /blog/boostcampaitech2/
 
 <!-- 
 ## Boostcamp AI Tech 2기
