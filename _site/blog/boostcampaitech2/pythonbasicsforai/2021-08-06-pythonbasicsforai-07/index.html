@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+
+
+
+
+
+
+<head>
+  
+
+
+
+
+  <meta name="robots" content="noindex">
+
+
+
+  
+    
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>[Python Basics for AI] 7. Python data handling | zgotter’s blog</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="[Python Basics for AI] 7. Python data handling" />
+<meta name="author" content="zgotter" />
+<meta property="og:locale" content="ko_KR, en_US" />
+<meta name="description" content="Python data handling" />
+<meta property="og:description" content="Python data handling" />
+<link rel="canonical" href="http://localhost:4000/blog/boostcampaitech2/pythonbasicsforai/2021-08-06-pythonbasicsforai-07/" />
+<meta property="og:url" content="http://localhost:4000/blog/boostcampaitech2/pythonbasicsforai/2021-08-06-pythonbasicsforai-07/" />
+<meta property="og:site_name" content="zgotter’s blog" />
+<meta property="og:image" content="http://localhost:4000/assets/img/boostcampaitech2/cover.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-08-06T00:00:00+09:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/img/boostcampaitech2/cover.png" />
+<meta property="twitter:title" content="[Python Basics for AI] 7. Python data handling" />
+<script type="application/ld+json">
+{"headline":"[Python Basics for AI] 7. Python data handling","dateModified":"2021-08-06T00:00:00+09:00","datePublished":"2021-08-06T00:00:00+09:00","url":"http://localhost:4000/blog/boostcampaitech2/pythonbasicsforai/2021-08-06-pythonbasicsforai-07/","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/blog/boostcampaitech2/pythonbasicsforai/2021-08-06-pythonbasicsforai-07/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/zgotter.JPG"},"name":"zgotter"},"author":{"@type":"Person","name":"zgotter"},"description":"Python data handling","image":"http://localhost:4000/assets/img/boostcampaitech2/cover.png","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  
+
+
+
+  <meta name="theme-color" content="#ccc">
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="zgotter's blog">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<meta name="application-name" content="zgotter's blog">
+
+<meta name="generator" content="Hydejack v9.1.5" />
+
+
+<link rel="alternate" href="http://localhost:4000/blog/boostcampaitech2/pythonbasicsforai/2021-08-06-pythonbasicsforai-07/" hreflang="ko-kr, en-us">
+
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="zgotter's blog" />
+
+
+<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+
+<link rel="manifest" href="/assets/site.webmanifest">
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+
+<link rel="preload" href="/assets/img/swipe.svg" as="image" id="_hrefSwipeSVG">
+
+<link rel="dns-prefetch" href="/assets/js/search-worker-9.1.5.js" as="worker" id="_hrefSearch">
+
+
+
+
+
+<script>!function(r,c){"use strict";function a(e,t,n,o){e.addEventListener?e.addEventListener(t,n,o):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n}r.loadJS=function(e,t){var n=c.createElement("script");n.src=e,t&&a(n,"load",t,{once:!0});t=c.scripts[0];return t.parentNode.insertBefore(n,t),n},r._loaded=!1,r.loadJSDeferred=function(e,t){var n=c.createElement("script");function o(){r._loaded=!0,t&&a(n,"load",t,{once:!0});var e=c.scripts[0];e.parentNode.insertBefore(n,e)}return n.src=e,r._loaded?o():a(r,"load",o,{once:!0}),n},r.setRel=r.setRelStylesheet=function(e){a(c.getElementById(e),"load",function(){this.rel="stylesheet"},{once:!0})}}(window,document);
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+!function(w) {
+  w._baseURL = '/';
+  w._publicPath = '/assets/js/';
+  w._noPushState = false;
+  w._noDrawer = false;
+  w._noNavbar = false;
+  w._noToc = false;
+  w._noSearch = false;
+  w._advertise = false;
+  w._search = {
+    DATA_URL: '/assets/sitedata.json?no-cache',
+    STORAGE_KEY: 'mini-search/',
+    INDEX_KEY: 'index--2022-03-25T03:17:44+09:00',
+  };
+  w._clapButton = true;
+}(window);</script>
+
+
+<script async src="/assets/bower_components/MathJax/es5/tex-mml-chtml.js" id="_MathJax"></script>
+
+
+<!--[if gt IE 8]><!---->
+
+  
+
+
+
+
+<link rel="stylesheet" href="/assets/css/hydejack-9.1.5.css" id="_stylePreload">
+<link rel="stylesheet" href="/assets/icomoon/style.css" id="_iconsPreload">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:700%7CNoto+Sans:400,400i,700,700i&display=swap" id="_fontsPreload">
+
+
+
+  <style id="_pageStyle">
+
+html{--accent-color: #ccc;--accent-color-faded: rgba(204,204,204,0.5);--accent-color-highlight: rgba(204,204,204,0.1);--accent-color-darkened: #b9b9b9;--theme-color: #ccc;--dark-mode-body-bg: #2d2d2d;--dark-mode-border-color: #393939}
+
+</style>
+
+
+<!--<![endif]-->
+
+
+
+
+
+</head>
+
+<body class="no-break-layout">
+  
+<script>
+  window._sunrise = 6;
+  window._sunset =  18;
+  !function(e,s){var d="light-mode",o="dark-mode",a=(new Date).getHours();"matchMedia"in e&&e.matchMedia("(prefers-color-scheme)")||(o=(e=a<=e._sunrise||a>=e._sunset?o:d)==o?d:o,s.body.classList.add(e),s.body.classList.remove(o))}(window,document);
+
+</script>
+
+
+
+<hy-push-state
+  id="_pushState"
+  replace-selector="#_main"
+  link-selector="a[href]:not([href^='/assets/']):not(.external):not(.no-push-state)"
+  script-selector="script"
+  duration="500"
+  hashchange
+>
+  
+  
+  <div id="_navbar" class="navbar fixed-top">
+  <div class="content">
+    <span class="sr-only">Jump to:</span>
+    <div class="nav-btn-bar">
+      <a id="_menu" class="nav-btn no-hover" href="#_drawer--opened">
+        <span class="sr-only">Navigation</span>
+        <span class="icon-menu"></span>
+      </a>
+      <div class="nav-span"></div>
+    </div>
+  </div>
+</div>
+<hr class="sr-only" hidden />
+
+  <main
+  id="_main"
+  class="content layout-post"
+  role="main"
+>
+  <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+    <li><a href="/">home</a></li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/blog/">blog</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/blog/boostcampaitech2/">boostcampaitech2</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/blog/boostcampaitech2/pythonbasicsforai/">pythonbasicsforai</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          <span>2021-08-06-pythonbasicsforai-07</span>
+        
+      </li>
+    
+  
+</ul></nav>
+  
+
+
+
+
+
+
+
+
+
+
+<article id="post-blog-boostcampaitech2-pythonbasicsforai-pythonbasicsforai-07" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title flip-project-title">
+      
+        [Python Basics for AI] 7. Python data handling
+      
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2021-08-06T00:00:00+09:00">06 Aug 2021</time> in <a href="/blog/boostcampaitech2/" class="flip-title">Boostcamp AI Tech 2</a> / <a href="/blog/pythonbasicsforai/" class="flip-title">Python Basics for AI</a> 
+      </span>
+      
+        
+      
+    </div>
+
+    
+    
+      
+        <div class="img-wrapper lead aspect-ratio sixteen-nine flip-project-img">
+          
+
+
+<img
+  
+    src="/assets/img/boostcampaitech2/cover.png"
+  
+  alt="[Python Basics for AI] 7. Python data handling"
+  
+  
+  width="864"
+  height="486"
+  loading="lazy"
+/>
+
+        </div>
+      
+      
+    
+
+    
+
+
+
+  
+    <p class="note-sm" >
+      Python data handling
+
+    </p>
+  
+
+
+  </header>
+
+  
+    <ul id="markdown-toc">
+  <li><a href="#71-csv-comma-separate-values" id="markdown-toc-71-csv-comma-separate-values">7.1 CSV (Comma Separate Values)</a>    <ul>
+      <li><a href="#711-파이썬으로-csv-파일-읽기쓰기" id="markdown-toc-711-파이썬으로-csv-파일-읽기쓰기">7.1.1 파이썬으로 CSV 파일 읽기/쓰기</a>        <ul>
+          <li><a href="#7111-csv-파일-읽기-예제" id="markdown-toc-7111-csv-파일-읽기-예제">7.1.1.1 csv 파일 읽기 예제</a></li>
+          <li><a href="#7112-csv-파일-쓰기-예제" id="markdown-toc-7112-csv-파일-쓰기-예제">7.1.1.2 csv 파일 쓰기 예제</a></li>
+        </ul>
+      </li>
+      <li><a href="#712-csv-객체로-csv-처리" id="markdown-toc-712-csv-객체로-csv-처리">7.1.2 CSV 객체로 CSV 처리</a>        <ul>
+          <li><a href="#7121-csv-객체-활용" id="markdown-toc-7121-csv-객체-활용">7.1.2.1 csv 객체 활용</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#72-html-hyper-text-markup-language" id="markdown-toc-72-html-hyper-text-markup-language">7.2 HTML (Hyper Text Markup Language)</a>    <ul>
+      <li><a href="#721-정규식-regular-expression" id="markdown-toc-721-정규식-regular-expression">7.2.1 정규식 (regular expression)</a></li>
+      <li><a href="#722-정규식-for-html-parsing" id="markdown-toc-722-정규식-for-html-parsing">7.2.2 정규식 for HTML Parsing</a></li>
+      <li><a href="#723-정규식-연습장-활용하기" id="markdown-toc-723-정규식-연습장-활용하기">7.2.3 정규식 연습장 활용하기</a></li>
+      <li><a href="#724-정규식-기본-문법" id="markdown-toc-724-정규식-기본-문법">7.2.4 정규식 기본 문법</a>        <ul>
+          <li><a href="#7241-메타-문자" id="markdown-toc-7241-메타-문자">7.2.4.1 메타 문자</a></li>
+        </ul>
+      </li>
+      <li><a href="#725-정규식-추출-연습" id="markdown-toc-725-정규식-추출-연습">7.2.5 정규식 추출 연습</a></li>
+      <li><a href="#726-정규식-in-파이썬" id="markdown-toc-726-정규식-in-파이썬">7.2.6 정규식 in 파이썬</a>        <ul>
+          <li><a href="#7261-연습-1" id="markdown-toc-7261-연습-1">7.2.6.1 연습 1</a></li>
+          <li><a href="#7262-연습-2" id="markdown-toc-7262-연습-2">7.2.6.2 연습 2</a></li>
+        </ul>
+      </li>
+      <li><a href="#727-정규식-in-파이썬-for-html" id="markdown-toc-727-정규식-in-파이썬-for-html">7.2.7 정규식 in 파이썬 for html</a></li>
+    </ul>
+  </li>
+  <li><a href="#73-xml-extensible-markup-language" id="markdown-toc-73-xml-extensible-markup-language">7.3 XML (eXtensible Markup Language)</a>    <ul>
+      <li><a href="#731-xml-이란" id="markdown-toc-731-xml-이란">7.3.1 XML 이란</a></li>
+      <li><a href="#732-xml-예제" id="markdown-toc-732-xml-예제">7.3.2 XML 예제</a></li>
+      <li><a href="#733-xml-parsing-in-python" id="markdown-toc-733-xml-parsing-in-python">7.3.3 XML Parsing in Python</a></li>
+      <li><a href="#734-beautifulsoup" id="markdown-toc-734-beautifulsoup">7.3.4 BeautifulSoup</a></li>
+      <li><a href="#735-beautifulsoup-모듈-사용" id="markdown-toc-735-beautifulsoup-모듈-사용">7.3.5 beautifulSoup 모듈 사용</a></li>
+    </ul>
+  </li>
+  <li><a href="#74-json-javascript-object-notation" id="markdown-toc-74-json-javascript-object-notation">7.4 JSON (JavaScript Object Notation)</a>    <ul>
+      <li><a href="#741-json-overview" id="markdown-toc-741-json-overview">7.4.1 JSON Overview</a></li>
+      <li><a href="#742-sample-json-schema" id="markdown-toc-742-sample-json-schema">7.4.2 Sample JSON Schema</a></li>
+      <li><a href="#743-json-in-python" id="markdown-toc-743-json-in-python">7.4.3 JSON in Python</a></li>
+      <li><a href="#744-json-read" id="markdown-toc-744-json-read">7.4.4 JSON Read</a></li>
+      <li><a href="#745-json-write" id="markdown-toc-745-json-write">7.4.5 JSON Write</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="71-csv-comma-separate-values">7.1 CSV (Comma Separate Values)</h2>
+
+<ul>
+  <li>엑셀 양식의 데이터를 프로그램에 상관없이 쓰기 위한 데이터 형식</li>
+  <li>탭(TSV), 빈칸(SSV) 등으로 구분해서 만들기도 함</li>
+</ul>
+
+<h3 id="711-파이썬으로-csv-파일-읽기쓰기">7.1.1 파이썬으로 CSV 파일 읽기/쓰기</h3>
+
+<ul>
+  <li>Text 파일 형태로 데이터 처리 예제</li>
+  <li>예제 데이터 : customer.csv (<a href="https://bit.ly/3psoUZb">https://bit.ly/3psoUZb</a>)</li>
+  <li>일반적 textfile을 처리하듯 파일을 읽어온 후, 한줄씩 데이터를 처리함</li>
+</ul>
+
+<h4 id="7111-csv-파일-읽기-예제">7.1.1.1 csv 파일 읽기 예제</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">line_counter</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># 파일의 총 줄수를 세는 변수
+</span><span class="n">data_header</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># data의 필드값을 저장하는 list
+</span><span class="n">customer_list</span> <span class="o">=</span> <span class="p">[]</span> <span class="c1"># customer 개별 list를 저장하는 list
+</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'customers.csv'</span><span class="p">)</span> <span class="k">as</span> <span class="n">customer_data</span><span class="p">:</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="n">customer_data</span><span class="p">.</span><span class="n">readline</span><span class="p">()</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">data</span><span class="p">:</span> <span class="k">break</span>
+        <span class="k">if</span> <span class="n">line_counter</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span> <span class="c1"># 첫 번째 데이터는 데이터의 필드
+</span>            <span class="n">data_header</span> <span class="o">=</span> <span class="n">data</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">','</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">customer_list</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="s">','</span><span class="p">))</span>
+        <span class="n">line_counter</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">'Header :</span><span class="se">\t</span><span class="s">'</span><span class="p">,</span> <span class="n">data_header</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">'data'</span><span class="p">,</span><span class="n">i</span><span class="p">,</span><span class="s">':</span><span class="se">\t\t</span><span class="s">'</span><span class="p">,</span> <span class="n">customer_list</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">customer_list</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Header :	 ['customerNumber', 'customerName', 'contactLastName', 'contactFirstName', 'phone', 'addressLine1', 'addressLine2', 'city', 'state', 'postalCode', 'country', 'salesRepEmployeeNumber', 'creditLimit\n']
+data 0 :		 ['103', '"Atelier graphique"', 'Schmitt', '"Carine "', '40.32.2555', '"54', ' rue Royale"', 'NULL', 'Nantes', 'NULL', '44000', 'France', '1370', '21000\n']
+data 1 :		 ['112', '"Signal Gift Stores"', 'King', 'Jean', '7025551838', '"8489 Strong St."', 'NULL', '"Las Vegas"', 'NV', '83030', 'USA', '1166', '71800\n']
+data 2 :		 ['114', '"Australian Collectors', ' Co."', 'Ferguson', 'Peter', '"03 9520 4555"', '"636 St Kilda Road"', '"Level 3"', 'Melbourne', 'Victoria', '3004', 'Australia', '1611', '117300\n']
+data 3 :		 ['119', '"La Rochelle Gifts"', 'Labrune', '"Janine "', '40.67.8555', '"67', ' rue des Cinquante Otages"', 'NULL', 'Nantes', 'NULL', '44000', 'France', '1370', '118200\n']
+data 4 :		 ['121', '"Baane Mini Imports"', 'Bergulfsen', '"Jonas "', '"07-98 9555"', '"Erling Skakkes gate 78"', 'NULL', 'Stavern', 'NULL', '4110', 'Norway', '1504', '81700\n']
+data 5 :		 ['124', '"Mini Gifts Distributors Ltd."', 'Nelson', 'Susan', '4155551450', '"5677 Strong St."', 'NULL', '"San Rafael"', 'CA', '97562', 'USA', '1165', '210500\n']
+data 6 :		 ['125', '"Havel &amp; Zbyszek Co"', 'Piestrzeniewicz', '"Zbyszek "', '"(26) 642-7555"', '"ul. Filtrowa 68"', 'NULL', 'Warszawa', 'NULL', '01-012', 'Poland', 'NULL', '0\n']
+data 7 :		 ['128', '"Blauer See Auto', ' Co."', 'Keitel', 'Roland', '"+49 69 66 90 2555"', '"Lyonerstr. 34"', 'NULL', 'Frankfurt', 'NULL', '60528', 'Germany', '1504', '59700\n']
+data 8 :		 ['129', '"Mini Wheels Co."', 'Murphy', 'Julie', '6505555787', '"5557 North Pendale Street"', 'NULL', '"San Francisco"', 'CA', '94217', 'USA', '1165', '64600\n']
+data 9 :		 ['131', '"Land of Toys Inc."', 'Lee', 'Kwai', '2125557818', '"897 Long Airport Avenue"', 'NULL', 'NYC', 'NY', '10022', 'USA', '1323', '114900\n']
+122
+</code></pre></div></div>
+
+<h4 id="7112-csv-파일-쓰기-예제">7.1.1.2 csv 파일 쓰기 예제</h4>
+
+<h3 id="712-csv-객체로-csv-처리">7.1.2 CSV 객체로 CSV 처리</h3>
+
+<ul>
+  <li>Text 파일 형태로 데이터 처리 시 문장 내에 들어가 있는 “,” 등에 대해 전처리 과정 필요</li>
+  <li>파이썬에서는 간단히 CSV 파일을 처리하기 위해 <strong>csv 객체</strong>를 제공함</li>
+  <li>예제 데이터 : <code class="language-plaintext highlighter-rouge">korea_food_traffic_data.csv</code> (<a href="http://www.data.go.kr">http://www.data.go.kr</a>)
+    <ul>
+      <li>국내 주요 상권의 유동인구 현황 정보</li>
+      <li>한글로 되어 있어 한글 처리 필요</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="7121-csv-객체-활용">7.1.2.1 csv 객체 활용</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="p">.</span><span class="n">reader</span><span class="p">(</span>
+    <span class="n">f</span><span class="p">,</span> <span class="c1"># 파일 객체
+</span>    <span class="n">delimiter</span><span class="o">=</span><span class="s">','</span><span class="p">,</span> <span class="c1"># 글자를 나누는 기준
+</span>    <span class="n">lineterminator</span><span class="o">=</span><span class="s">'</span><span class="se">\r\n</span><span class="s">'</span><span class="p">,</span> <span class="c1"># 줄 바꿈 기준
+</span>    <span class="n">quotechar</span><span class="o">=</span><span class="s">'"'</span><span class="p">,</span> <span class="c1"># 문자열을 둘러싸는 신호 문자
+</span>    <span class="n">quoting</span><span class="o">=</span><span class="n">csv</span><span class="p">.</span><span class="n">QUOTE_ALL</span> <span class="c1"># 데이터를 나누는 기준이 quotechar에 의해 둘러싸인 레벨
+</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li>참고 : Windows 에서는 encoding 형식을 <code class="language-plaintext highlighter-rouge">cp949</code>를 사용한다. (왠만한 데이터는 <code class="language-plaintext highlighter-rouge">utf8</code>로 바꿔서 사용하는 것이 좋다.)</li>
+</ul>
+
+<h2 id="72-html-hyper-text-markup-language">7.2 HTML (Hyper Text Markup Language)</h2>
+
+<h3 id="721-정규식-regular-expression">7.2.1 정규식 (regular expression)</h3>
+
+<ul>
+  <li>정규 표현식, regexp 또는 regex 등으로 불림</li>
+  <li>복잡한 문자열 패턴을 정의하는 문자 표현 공식</li>
+  <li>특정한 규칙을 가진 문자열의 집합을 추출</li>
+</ul>
+
+<pre><code class="language-regex">010-0000-0000 ^\d{3}\-\d{4}\-\d{4}$
+203.252.101.40 ^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$
+</code></pre>
+
+<h3 id="722-정규식-for-html-parsing">7.2.2 정규식 for HTML Parsing</h3>
+
+<ul>
+  <li>주민등록번호, 전화번호, 도서 ISBN 등 형식이 있는 문자열을 원본 문자열로부터 추출함</li>
+  <li>HTML 역시 tag를 사용한 일정한 형식이 존재하여 정규식으로 추출이 용이함</li>
+  <li>
+    <p>관련 자료 : <a href="http://www.nextree.co.kr/p4327">http://www.nextree.co.kr/p4327</a></p>
+  </li>
+  <li>문법 자체는 매우 방대, 스스로 찾아서 하는 공부 필요</li>
+</ul>
+
+<h3 id="723-정규식-연습장-활용하기">7.2.3 정규식 연습장 활용하기</h3>
+
+<ul>
+  <li><a href="http://www.regexr.com">http://www.regexr.com</a></li>
+</ul>
+
+<h3 id="724-정규식-기본-문법">7.2.4 정규식 기본 문법</h3>
+
+<h4 id="7241-메타-문자">7.2.4.1 메타 문자</h4>
+
+<ul>
+  <li>정규식 표현을 위해 원래 의미가 아닌 다른 용도로 사용되는 문자
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>. ^ $ * + ? { } [ ] \ | ( )
+</code></pre></div>    </div>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">.</code> : 줄바꿈 문자인 <code class="language-plaintext highlighter-rouge">\n</code>을 제외한 모든 문자와 매치</li>
+  <li><code class="language-plaintext highlighter-rouge">*</code> : 앞에 있는 글자를 반복해서 나올 수 있음
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">tomor*ow</code> : tomorrow, tomoow, tomorrrrow</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">+</code> : 앞에 있는 글자를 최소 1회 이상 반복</li>
+  <li><code class="language-plaintext highlighter-rouge">{m,n}</code> : 반복 횟수를 지정
+    <ul>
+      <li>203.252.101.40 : <code class="language-plaintext highlighter-rouge">[0-9]{1,3}</code>, <code class="language-plaintext highlighter-rouge">\d{1,3}</code></li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">?</code> : 반복 횟수가 1회</li>
+  <li><code class="language-plaintext highlighter-rouge">|</code> : or</li>
+  <li><code class="language-plaintext highlighter-rouge">^</code> : not</li>
+</ul>
+
+<h3 id="725-정규식-추출-연습">7.2.5 정규식 추출 연습</h3>
+
+<ul>
+  <li>정규식 연습장(<a href="http://www.regexr.com">http://www.regexr.com</a>)으로 이동</li>
+  <li>구글 USPTO Bulk Download 데이터 페이지 소스 보기 클릭
+    <ul>
+      <li><a href="http://www.google.com/googlebooks/uspto-patents-grants-text.html">http://www.google.com/googlebooks/uspto-patents-grants-text.html</a></li>
+    </ul>
+  </li>
+  <li>소스 전체 복사 후 정규식 연습장 페이지에 붙여넣기</li>
+  <li>상단 Expression 부분을 수정해가며 “Zip”로 끝나는 파일명만 추출</li>
+  <li>Expression에 <code class="language-plaintext highlighter-rouge">(http)(.+)(zip)</code> 를 입력</li>
+</ul>
+
+<h3 id="726-정규식-in-파이썬">7.2.6 정규식 in 파이썬</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">re</code> 모듈을 import 하여 사용</li>
+  <li>함수
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">search</code> : 한 개만 찾기</li>
+      <li><code class="language-plaintext highlighter-rouge">findall</code> : 전체 찾기</li>
+    </ul>
+  </li>
+  <li>추출된 패턴은 tuple로 반환됨</li>
+</ul>
+
+<h4 id="7261-연습-1">7.2.6.1 연습 1</h4>
+
+<ul>
+  <li>특정 페이지에서 ID 만 추출하기 (<a href="https://bit.ly/3rxQFS4">https://bit.ly/3rxQFS4</a>)</li>
+  <li>ID 패턴 : <code class="language-plaintext highlighter-rouge">[영문대소문자|숫자]</code> 여러 개, 별표로 끝남
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">[A-Za-z0-9]+\*\*\*</code></li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">urllib.request</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s">'https://bit.ly/3rxQFS4'</span>
+<span class="n">html</span> <span class="o">=</span> <span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">html_contents</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">html</span><span class="p">.</span><span class="n">head</span><span class="p">())</span>
+<span class="n">id_results</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s">"[A-Za-z0-9]+\*\*\*"</span><span class="p">,</span> <span class="n">html_contents</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">id_results</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h4 id="7262-연습-2">7.2.6.2 연습 2</h4>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">urllib.request</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s">'http://www.google.com/googlebooks/uspto-patents-grants-text.html'</span>
+<span class="n">html</span> <span class="o">=</span> <span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">html_contents</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">html</span><span class="p">.</span><span class="n">read</span><span class="p">().</span><span class="n">decode</span><span class="p">(</span><span class="s">'utf8'</span><span class="p">))</span>
+
+<span class="n">url_list</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">findall</span><span class="p">(</span><span class="sa">r</span><span class="s">'(http)(.+)(zip)'</span><span class="p">,</span> <span class="n">html_contents</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">url</span> <span class="ow">in</span> <span class="n">url_list</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">''</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">url</span><span class="p">))</span>
+</code></pre></div></div>
+
+<h3 id="727-정규식-in-파이썬-for-html">7.2.7 정규식 in 파이썬 for html</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;dl class="blind"&gt;
+    &lt;dt&gt;종목 시세 정보&lt;/dt&gt;
+    &lt;dd&gt;2021년 07월 23일 16시 10분 기준 장마감&lt;/dd&gt;
+    &lt;dd&gt;종목명 삼성전자&lt;/dd&gt;
+    &lt;dd&gt;종목코드 005930 코스피&lt;/dd&gt;
+    &lt;dd&gt;현재가 79,300 전일대비 하락 400 마이너스 0.50 퍼센트&lt;/dd&gt;
+    &lt;dd&gt;전일가 79,700&lt;/dd&gt;
+    &lt;dd&gt;시가 79,700&lt;/dd&gt;
+    &lt;dd&gt;고가 79,900&lt;/dd&gt;
+    &lt;dd&gt;상한가 103,500&lt;/dd&gt;
+    &lt;dd&gt;저가 79,200&lt;/dd&gt;
+    &lt;dd&gt;하한가 55,800&lt;/dd&gt;
+    &lt;dd&gt;거래량 8,976,997&lt;/dd&gt;
+    &lt;dd&gt;거래대금 713,707백만&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">&lt;dl class="blind"&gt; ~~~ &lt;/dl&gt;</code> 에 있는
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">(\&lt;dl class=\"blind\"\&gt;)([\s\S]+?)(\&lt;\/dl\&gt;)</code></li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">&lt;dd&gt; ~~~ &lt;/dd&gt;</code> 정보를 추출
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">(\&lt;dd\&gt;)([\s\S]+?)(\&lt;\/dd\&gt;)</code></li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">urllib.request</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s">'http://finance.naver.com/item/main.nhn?code=005930'</span>
+<span class="n">html</span> <span class="o">=</span> <span class="n">urllib</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">html_contents</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">html</span><span class="p">.</span><span class="n">read</span><span class="p">().</span><span class="n">decode</span><span class="p">(</span><span class="s">'ms949'</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">stock_results</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">findall</span><span class="p">(</span><span class="s">'(\&lt;dl class=</span><span class="se">\"</span><span class="s">blind</span><span class="se">\"</span><span class="s">\&gt;)([\s\S]+?)(\&lt;\/dl\&gt;)'</span><span class="p">,</span> <span class="n">html_contents</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">stock_results</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[('&lt;dl class="blind"&gt;', '\n\t        &lt;dt&gt;종목 시세 정보&lt;/dt&gt;\n\t        &lt;dd&gt;2021년 07월 23일 16시 10분 기준 장마감&lt;/dd&gt;\n\t        &lt;dd&gt;종목명 삼성전자&lt;/dd&gt;\n\t        &lt;dd&gt;종목코드 005930 코스피&lt;/dd&gt;\n\t        &lt;dd&gt;현재가 79,300 전일대비 하락 400 마이너스 0.50 퍼센트&lt;/dd&gt;\n\t        &lt;dd&gt;전일가 79,700&lt;/dd&gt;\n\t        &lt;dd&gt;시가 79,700&lt;/dd&gt;\n\t        &lt;dd&gt;고가 79,900&lt;/dd&gt;\n\t        &lt;dd&gt;상한가 103,500&lt;/dd&gt;\n\t        &lt;dd&gt;저가 79,200&lt;/dd&gt;\n\t        &lt;dd&gt;하한가 55,800&lt;/dd&gt;\n\t        &lt;dd&gt;거래량 8,976,997&lt;/dd&gt;\n\t        &lt;dd&gt;거래대금 713,707백만&lt;/dd&gt;\n        ', '&lt;/dl&gt;'), ('&lt;dl class="blind"&gt;', '\n                        &lt;dt&gt;&lt;strong&gt;삼성전자&lt;/strong&gt;&lt;/dt&gt;\n                        &lt;dd&gt;오늘의시세 79,300 포인트&lt;/dd&gt;\n                        &lt;dd&gt;400 포인트 하락&lt;/dd&gt;\n                        &lt;dd&gt;0.50% 마이너스&lt;/dd&gt;\n                ', '&lt;/dl&gt;')]
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">samsung_stock</span> <span class="o">=</span> <span class="n">stock_results</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">samsung_stock</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>('&lt;dl class="blind"&gt;',
+ '\n\t        &lt;dt&gt;종목 시세 정보&lt;/dt&gt;\n\t        &lt;dd&gt;2021년 07월 23일 16시 10분 기준 장마감&lt;/dd&gt;\n\t        &lt;dd&gt;종목명 삼성전자&lt;/dd&gt;\n\t        &lt;dd&gt;종목코드 005930 코스피&lt;/dd&gt;\n\t        &lt;dd&gt;현재가 79,300 전일대비 하락 400 마이너스 0.50 퍼센트&lt;/dd&gt;\n\t        &lt;dd&gt;전일가 79,700&lt;/dd&gt;\n\t        &lt;dd&gt;시가 79,700&lt;/dd&gt;\n\t        &lt;dd&gt;고가 79,900&lt;/dd&gt;\n\t        &lt;dd&gt;상한가 103,500&lt;/dd&gt;\n\t        &lt;dd&gt;저가 79,200&lt;/dd&gt;\n\t        &lt;dd&gt;하한가 55,800&lt;/dd&gt;\n\t        &lt;dd&gt;거래량 8,976,997&lt;/dd&gt;\n\t        &lt;dd&gt;거래대금 713,707백만&lt;/dd&gt;\n        ',
+ '&lt;/dl&gt;')
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">samsung_index</span> <span class="o">=</span> <span class="n">samsung_stock</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">samsung_index</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'\n\t        &lt;dt&gt;종목 시세 정보&lt;/dt&gt;\n\t        &lt;dd&gt;2021년 07월 23일 16시 10분 기준 장마감&lt;/dd&gt;\n\t        &lt;dd&gt;종목명 삼성전자&lt;/dd&gt;\n\t        &lt;dd&gt;종목코드 005930 코스피&lt;/dd&gt;\n\t        &lt;dd&gt;현재가 79,300 전일대비 하락 400 마이너스 0.50 퍼센트&lt;/dd&gt;\n\t        &lt;dd&gt;전일가 79,700&lt;/dd&gt;\n\t        &lt;dd&gt;시가 79,700&lt;/dd&gt;\n\t        &lt;dd&gt;고가 79,900&lt;/dd&gt;\n\t        &lt;dd&gt;상한가 103,500&lt;/dd&gt;\n\t        &lt;dd&gt;저가 79,200&lt;/dd&gt;\n\t        &lt;dd&gt;하한가 55,800&lt;/dd&gt;\n\t        &lt;dd&gt;거래량 8,976,997&lt;/dd&gt;\n\t        &lt;dd&gt;거래대금 713,707백만&lt;/dd&gt;\n        '
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">index_list</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">findall</span><span class="p">(</span><span class="s">'(\&lt;dd\&gt;)([\s\S]+?)(\&lt;\/dd\&gt;)'</span><span class="p">,</span> <span class="n">samsung_index</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="n">index_list</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">index</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>2021년 07월 23일 16시 10분 기준 장마감
+종목명 삼성전자
+종목코드 005930 코스피
+현재가 79,300 전일대비 하락 400 마이너스 0.50 퍼센트
+전일가 79,700
+시가 79,700
+고가 79,900
+상한가 103,500
+저가 79,200
+하한가 55,800
+거래량 8,976,997
+거래대금 713,707백만
+</code></pre></div></div>
+
+<h2 id="73-xml-extensible-markup-language">7.3 XML (eXtensible Markup Language)</h2>
+
+<h3 id="731-xml-이란">7.3.1 XML 이란</h3>
+
+<ul>
+  <li>데이터의 구조와 의미를 설명하는 TAG(Markup)를 사용하여 표시하는 언어</li>
+  <li>TAG와 TAG 사이에 값이 표시되고, 구조적인 정보를 표현할 수 있음</li>
+  <li>정보의 구조에 대한 정보인 스키마와 DTD 등으로 정보에 대한 정보(메타정보)가 표현되며, 용도에 따라 다양한 형태로 변경 가능</li>
+  <li>XML은 컴퓨터(ex. PC &lt;-&gt; 스마트폰)간에 정보를 주고받기 매우 유용한 저장 방식으로 쓰이고 있음</li>
+</ul>
+
+<h3 id="732-xml-예제">7.3.2 XML 예제</h3>
+
+<h3 id="733-xml-parsing-in-python">7.3.3 XML Parsing in Python</h3>
+
+<ul>
+  <li>XML 도 정규표현식으로 Parsing 이 가능함</li>
+  <li>그러나 좀 더 손쉬운 도구들이 개발되어 있음</li>
+  <li>가장 많이 쓰이는 parser인 <code class="language-plaintext highlighter-rouge">beautifulsoup</code> 으로 파싱</li>
+</ul>
+
+<h3 id="734-beautifulsoup">7.3.4 BeautifulSoup</h3>
+
+<ul>
+  <li>HTML, XML 등 Markup 언어 Scraping 을 위한 대표적인 도구</li>
+  <li><code class="language-plaintext highlighter-rouge">lxml</code> 과 <code class="language-plaintext highlighter-rouge">html5lib</code> 과 같은 parser를 사용함</li>
+  <li>속도는 상대적으로 느리나 간편히 사용할 수 있음</li>
+</ul>
+
+<h3 id="735-beautifulsoup-모듈-사용">7.3.5 beautifulSoup 모듈 사용</h3>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># 모듈 호출
+</span><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="c1"># 객체 생성
+</span><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">books_xml</span><span class="p">,</span> <span class="s">'lxml'</span><span class="p">)</span>
+
+<span class="c1"># tag를 찾는 함수 find_all
+</span><span class="n">soup</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">'author'</span><span class="p">)</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">find_all()</code> : 정규식과 마찬가지로 해당 패턴을 모두 반환</li>
+  <li><code class="language-plaintext highlighter-rouge">get_text()</code> : 반환된 패턴의 값 반환 (태그와 태그 사이의 값)</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'books.xml'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">'utf8'</span><span class="p">)</span> <span class="k">as</span> <span class="n">books_file</span><span class="p">:</span>
+    <span class="n">books_xml</span> <span class="o">=</span> <span class="n">books_file</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">books_xml</span><span class="p">,</span> <span class="s">'lxml'</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">book_info</span> <span class="ow">in</span> <span class="n">soup</span><span class="p">.</span><span class="n">find_all</span><span class="p">(</span><span class="s">'author'</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">book_info</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">book_info</span><span class="p">.</span><span class="n">get_text</span><span class="p">())</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;author&gt;Carson&lt;/author&gt;
+Carson
+&lt;author&gt;Sungchul&lt;/author&gt;
+Sungchul
+</code></pre></div></div>
+
+<h2 id="74-json-javascript-object-notation">7.4 JSON (JavaScript Object Notation)</h2>
+
+<h3 id="741-json-overview">7.4.1 JSON Overview</h3>
+
+<ul>
+  <li>원래 웹 언어인 JavaScript 의 데이터 객체 표현 방식</li>
+  <li>간결성으로 기계/인간이 모두 이해하기 편함</li>
+  <li>데이터 용량이 적고, code로의 전환이 쉬움</li>
+  <li>이로 인해 XML의 대체제로 많이 활용되고 있음</li>
+</ul>
+
+<h3 id="742-sample-json-schema">7.4.2 Sample JSON Schema</h3>
+
+<ul>
+  <li>Python의 Dict Type 과 유사</li>
+  <li><a href="https://www.flickr.com/photos/xmodulo/26106186415">https://www.flickr.com/photos/xmodulo/26106186415</a></li>
+</ul>
+
+<h3 id="743-json-in-python">7.4.3 JSON in Python</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">json</code> 모듈을 사용하여 손쉽게 파싱 및 저장 가능</li>
+  <li>데이터 저장 및 읽기는 dict type과 상호 호환 가능</li>
+  <li>웹에서 제공하는 API는 대부분 정보 교환 시 JSON 활용</li>
+  <li>각 사이트마다 Developer API의 활용법을 찾아 사용</li>
+</ul>
+
+<h3 id="744-json-read">7.4.4 JSON Read</h3>
+
+<ul>
+  <li>JSON 파일의 구조를 확인</li>
+  <li>읽기</li>
+  <li>dict type 처럼 처리</li>
+</ul>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="err">'employees':</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="err">'firstName':</span><span class="w"> </span><span class="err">'John'</span><span class="p">,</span><span class="w"> </span><span class="err">'lastName':</span><span class="w"> </span><span class="err">'Doe'</span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="err">'firstName':</span><span class="w"> </span><span class="err">'Anna'</span><span class="p">,</span><span class="w"> </span><span class="err">'lastName':</span><span class="w"> </span><span class="err">'Smith'</span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="err">'firstName':</span><span class="w"> </span><span class="err">'Peter'</span><span class="p">,</span><span class="w"> </span><span class="err">'lastName':</span><span class="w"> </span><span class="err">'Jones'</span><span class="p">}</span><span class="w">
+</span><span class="p">]}</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'json_example.json'</span><span class="p">,</span> <span class="s">'r'</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">'utf8'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">contents</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="n">json_data</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">loads</span><span class="p">(</span><span class="n">contents</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">json_data</span><span class="p">[</span><span class="s">'employees`])
+</span></code></pre></div></div>
+
+<h3 id="745-json-write">7.4.5 JSON Write</h3>
+
+<ul>
+  <li>Dict type으로 데이터 저장</li>
+  <li>json 모듈로 write</li>
+</ul>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">dict_data</span> <span class="o">=</span> <span class="p">{</span><span class="s">'Name'</span><span class="p">:</span> <span class="s">'Zara'</span><span class="p">,</span> <span class="s">'Age'</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span> <span class="s">'Class'</span><span class="p">:</span> <span class="s">'First'</span><span class="p">}</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'data.json'</span><span class="p">,</span> <span class="s">'w'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">json</span><span class="p">.</span><span class="n">dump</span><span class="p">(</span><span class="n">dict_data</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+</code></pre></div></div>
+
+  
+</article>
+
+
+
+  <hr class="dingbat related mb6" />
+
+
+
+
+
+
+  
+     
+
+
+  <aside class="about related mt4 mb4" role="complementary">
+    
+    
+
+<div class="author mt4">
+  
+
+  
+    
+
+
+<img
+  
+    src="/assets/img/zgotter.JPG"
+    srcset="/assets/img/zgotter.JPG 1x,/assets/img/zgotter.JPG 2x"
+    
+  
+  alt="김성한"
+  class="avatar"
+  
+  width="120"
+  height="120"
+  loading="lazy"
+/>
+
+  
+
+  
+  
+  <h2  class="page-title hr-bottom">
+    About
+  </h2>
+
+  <p>데이터 엔지니어를 꿈꾸는 개발자</p>
+
+
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://instagram.com/haanneeeee" title="Instagram" class="no-mark-external">
+      <span class="icon-instagram"></span>
+      <span class="sr-only">Instagram</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/zgotter" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:shkim4738@gmail.com" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+
+  </aside>
+
+
+  
+
+  
+    
+
+
+  
+
+  
+    
+
+
+  <aside class="other-projects related mb0" role="complementary">  <h2>Related Posts</h2>  <div class="columns">          <div class="column column-1-2">                  <article class="project-card">  <a href="/blog/boostcampaitech2/aimath/2021-08-06-aimath-01/" class="no-hover no-print-link flip-project" tabindex="-1">    <div class="project-card-img aspect-ratio sixteen-nine flip-project-img">              <img      src="/assets/img/boostcampaitech2/cover.png"    alt="[AI Math] 1. 벡터"      width="864"  height="486"  loading="lazy"/>          </div>  </a>  <h3 class="project-card-title flip-project-title">    <a href="/blog/boostcampaitech2/aimath/2021-08-06-aimath-01/" class="flip-title">[AI Math] 1. 벡터</a>  </h3>      <p class="project-card-text fine" property="disambiguatingDescription">      벡터    </p>      <a class="fill-card no-hover" href="/blog/boostcampaitech2/aimath/2021-08-06-aimath-01/" tabindex="-1"><span class="sr-only">Continue reading [AI Math] 1. 벡터</span></a></article>              </div>          <div class="column column-1-2">                  <article class="project-card">  <a href="/blog/boostcampaitech2/pythonbasicsforai/2021-08-06-pythonbasicsforai-06/" class="no-hover no-print-link flip-project" tabindex="-1">    <div class="project-card-img aspect-ratio sixteen-nine flip-project-img">              <img      src="/assets/img/boostcampaitech2/cover.png"    alt="[Python Basics for AI] 6. Exception / File / Log Handling"      width="864"  height="486"  loading="lazy"/>          </div>  </a>  <h3 class="project-card-title flip-project-title">    <a href="/blog/boostcampaitech2/pythonbasicsforai/2021-08-06-pythonbasicsforai-06/" class="flip-title">[Python Basics for AI] 6. Exception / File / Log Handling</a>  </h3>      <p class="project-card-text fine" property="disambiguatingDescription">      Exception / File / Log Handling    </p>      <a class="fill-card no-hover" href="/blog/boostcampaitech2/pythonbasicsforai/2021-08-06-pythonbasicsforai-06/" tabindex="-1"><span class="sr-only">Continue reading [Python Basics for AI] 6. Exception / File / Log Handling</span></a></article>              </div>      </div></aside>
+
+  
+
+  
+    
+
+
+  <aside class="related mb4" role="complementary">  <h2 class="hr-bottom">Random Posts</h2>  <ul class="related-posts">          <li class="h4">  <a href="/blog/boostcampaitech2/pythonbasicsforai/2021-08-06-pythonbasicsforai-04/" class="flip-title"><span>[Python Basics for AI] 4. 파이썬 객체 지향 프로그래밍</span></a>  <time class="faded fine" datetime="2021-08-06T00:00:00+09:00">06 Aug 2021</time></li>          <li class="h4">  <a href="/blog/boostcampaitech2/pythonbasicsforai/2021-08-06-pythonbasicsforai-06/" class="flip-title"><span>[Python Basics for AI] 6. Exception / File / Log Handling</span></a>  <time class="faded fine" datetime="2021-08-06T00:00:00+09:00">06 Aug 2021</time></li>          <li class="h4">  <a href="/blog/boostcampaitech2/pythonbasicsforai/2021-08-06-pythonbasicsforai-03/" class="flip-title"><span>[Python Basics for AI] 3. 파이썬 기초 문법 2</span></a>  <time class="faded fine" datetime="2021-08-06T00:00:00+09:00">06 Aug 2021</time></li>      </ul></aside>
+
+  
+
+  
+    
+<aside class="comments related" role="complementary">
+  <h2 class="hr-bottom">Comments</h2>
+  <script src="https://utteranc.es/client.js"
+        repo="zgotter/blog-comments"
+        issue-term="pathname"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</aside>
+
+
+  
+
+
+  
+<footer class="content" role="contentinfo">
+  <hr/>
+  
+    <p><small class="copyright">© 2021. All rights reserved.
+</small></p>
+  
+  
+  
+  <hr class="sr-only"/>
+</footer>
+
+
+</main>
+
+  <hy-drawer
+  id="_drawer"
+  class=""
+  side="left"
+  threshold="10"
+  noscroll
+  
+>
+  <header id="_sidebar" class="sidebar" role="banner">
+    
+
+
+
+
+<div class="sidebar-bg " style="background:url('/assets/img/boostcampaitech2/cover.png') center/cover"></div>
+
+    <div class="sidebar-sticky">
+  <div class="sidebar-about">
+    
+      <a class="no-hover" href="/" tabindex="-1">
+        <img src="/assets/img/zgotter.JPG" class="avatar" alt="zgotter's blog" width="120" height="120" loading="lazy" />
+      </a>
+    
+    <a class="sidebar-title" href="/"><h2 class="h1">zgotter's blog</h2></a>
+    
+    
+      <p class="">
+        데이터 엔지니어를 꿈꾸는 개발자
+
+      </p>
+    
+  </div>
+
+  <nav class="sidebar-nav heading" role="navigation">
+    <span class="sr-only">Navigation:</span>
+<ul>
+  
+    
+      
+      <li>
+        <a
+          id="_drawer--opened"
+          href="/blog/"
+          class="sidebar-nav-item "
+          
+        >
+          Blog
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/categories/"
+          class="sidebar-nav-item "
+          
+        >
+          Categories
+        </a>
+      </li>
+    
+  
+</ul>
+
+  </nav>
+
+  
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://instagram.com/haanneeeee" title="Instagram" class="no-mark-external">
+      <span class="icon-instagram"></span>
+      <span class="sr-only">Instagram</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/zgotter" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="mailto:shkim4738@gmail.com" title="Email" class="no-mark-external">
+      <span class="icon-mail"></span>
+      <span class="sr-only">Email</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+  </header>
+</hy-drawer>
+<hr class="sr-only" hidden />
+
+</hy-push-state>
+
+
+  <!--[if gt IE 10]><!---->
+  <script nomodule>!function(){var t,n=document.createElement("script");!("noModule"in n)&&"onbeforeload"in n&&(t=!1,document.addEventListener("beforeload",function(e){if(e.target===n)t=!0;else if(!e.target.hasAttribute("nomodule")||!t)return;e.preventDefault()},!0),n.type="module",n.src=".",document.head.appendChild(n),n.remove())}();
+</script>
+  <script src="/assets/js/hydejack-9.1.5.js" type="module"></script>
+  <script src="/assets/js/LEGACY-hydejack-9.1.5.js" nomodule defer></script>
+  
+
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BC9R9Z2DWZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BC9R9Z2DWZ');
+  </script>
+  <script>!function(w, d) {
+    w.ga=w.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+
+    /**/
+      ga('create', 'G-BC9R9Z2DWZ', 'auto');
+    /**/
+
+    var pushStateEl = d.getElementById('_pushState');
+    var timeoutId;
+    pushStateEl.addEventListener('hy-push-state-load', function() {
+      w.clearTimeout(timeoutId);
+      timeoutId = w.setTimeout(function() {
+        ga('set', 'page', w.location.pathname);
+        ga('send', 'pageview');
+      }, 500);
+    });
+
+    d.addEventListener('hy--cookies-ok', function () {
+      w.ga(function(tracker) {
+        w.ga("set", "anonymizeIp", undefined);
+        localStorage && localStorage.setItem("ga--client-id", tracker.get("clientId"));
+      });
+    });
+
+    w.loadJSDeferred('https://www.google-analytics.com/analytics.js');
+  }(window, document);</script>
+
+
+  <script type="module">
+    if ('serviceWorker' in navigator) {
+      /**/
+      navigator.serviceWorker.getRegistration()
+        .then(r => r.unregister())
+        .catch(() => {});
+      /**/
+    }
+  </script>
+<!--<![endif]-->
+  
+
+
+
+<div hidden>
+  
+  <h2 class="sr-only">Templates (for web app):</h2>
+
+  <clap-config>
+    <clap-text at="1">Keep going!</clap-text>
+    <clap-text at="2">Keep going ×2!</clap-text>
+    <clap-text at="3">Give me more!</clap-text>
+    <clap-text at="5">Thank you, thank you</clap-text>
+    <clap-text at="7">Far too kind!</clap-text>
+    <clap-text at="10">Never gonna give me up?</clap-text>
+    <clap-text at="14">Never gonna let me down?</clap-text>
+    <clap-text at="20">Turn around and desert me!</clap-text>
+    <clap-text at="30">You're an addict!</clap-text>
+    <clap-text at="40">Son of a clapper!</clap-text>
+    <clap-text at="50">No way</clap-text>
+    <clap-text at="60">Go back to work!</clap-text>
+    <clap-text at="70">This is getting out of <em>hand</em></clap-text>
+    <clap-text at="80">Unbelievable</clap-text>
+    <clap-text at="90">PREPOSTEROUS</clap-text>
+    <clap-text at="100">I N S A N I T Y</clap-text>
+    <clap-text at="185"><span style="font-family:monospace">FEED ME A STRAY CAT</span></clap-text>
+  </clap-config>
+
+  <template id="_animation-template">
+  <div class="animation-main fixed-top">
+    <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+</ul></nav>
+    <div class="content">
+      <div class="page"></div>
+    </div>
+  </div>
+</template>
+
+  <template id="_loading-template">
+  <div class="loading nav-btn fr">
+    <span class="sr-only">Loading…</span>
+    <span class="icon-cog"></span>
+  </div>
+</template>
+
+  <template id="_error-template">
+  <div class="page">
+    <h1 class="page-title">Error</h1>
+    
+    
+    <p class="lead">
+      Sorry, an error occurred while loading <a class="this-link" href=""></a>.
+
+    </p>
+  </div>
+</template>
+
+  <template id="_permalink-template">
+  <a href="#" class="permalink">
+    <span class="sr-only">Permalink</span>
+    <span class="content-hash"></span>
+  </a>
+</template>
+
+  
+  
+    <template id="_dark-mode-template">
+  <button id="_dark-mode" class="nav-btn no-hover" >
+    <span class="sr-only">Dark Mode</span>
+    <span class="icon-brightness-contrast"></span>
+  </button>
+</template>
+
+  
+  
+    <template id="_search-template">
+  <button id="_search" class="nav-btn no-hover">
+    <label class="sr-only" for="_search-input">Search</label>
+    <span class="icon-search"></span>
+  </button>
+  <div id="_search-box">
+    <div class="nav-btn">
+      <span class="icon-search"></span>
+    </div>
+    <input 
+      id="_search-input"
+      type="search"
+      class="form-control form-control-lg nav-btn"
+      placeholder="Build with JEKYLL_ENV=production to enable search."
+    />
+    <button type="reset" class="nav-btn no-hover">
+      <span class="sr-only">Close</span>
+      <span class="icon-cross"></span>
+    </button>
+  </div>
+  <div id="_hits"></div>
+</template>
+
+  
+</div>
+
+</body>
+</html>

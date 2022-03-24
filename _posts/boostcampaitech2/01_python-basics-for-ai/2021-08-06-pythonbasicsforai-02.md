@@ -46,7 +46,6 @@ print(f(x) + g(x) + f(g(x)) + g(f(x))) # 151
     151
 
 
-<br>
 
 ## 2.3 Conditionals and Loops
 
@@ -83,7 +82,6 @@ type_hint_example('sunghan')
 
 
 
-<br>
 
 **Type hints의 장점**
 
@@ -93,7 +91,6 @@ type_hint_example('sunghan')
 - 시스템 전체적인 안정성을 확보할 수 있다.
 
 
-<br>
 
 ### 2.4.2 function docstring
 
@@ -134,12 +131,10 @@ print(add_binary(10, 15))
     11001
 
 
-<br>
 
 - vscode 의 `Python Docstring Generator` extensions 를 설치하면 손쉽게 docstring 을 작성할 수 있다.
   - `Ctrl + Shift + P` -> `Generate Docstring`
 
-<br>
 
 ### 2.4.3 함수 작성 가이드 라인
 

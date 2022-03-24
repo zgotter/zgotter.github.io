@@ -52,10 +52,10 @@ menu:
     url:               /blog/
   - title:             Categories
     url:               /categories/
-  - title:             Projects
-    url:               /projects/
-  - title:             Resume
-    url:               /resume/
+  # - title:             Projects
+  #   url:               /projects/
+  # - title:             Resume
+  #   url:               /resume/
   # - title:             Documentation
   #   url:               /docs/
 
