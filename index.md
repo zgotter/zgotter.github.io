@@ -4,7 +4,7 @@ title: zgotter의 블로그
 sitemap: false
 ---
 
-<img src="/assets/img/personal/white.jpg" width=700 >
+<div style="text-align: center;"><img src="/assets/img/personal/shkim.jpg" width=500 ></div>
 
 <!-- 
 Thank you for buying the PRO version of Hydejack! 🎉
